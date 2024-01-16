@@ -1,0 +1,15 @@
+audomo
+cookiecutter
+flit
+frenchmaid
+hatch
+hwid
+fastapi
+pdm
+pipenv-resolver
+pipenv
+poe
+pygount
+pyscript
+twine
+virtualenv
