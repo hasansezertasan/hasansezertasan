@@ -21,7 +21,7 @@ I'm in love with open source and I'm learning new things every day. I like to sp
 
 Lately, I and some friends found [FastAPI Türkiye][fastapi-turkiye] to help people in Türkiye to learn FastAPI. We are actively working on the translation of the official documentation and we are planning to create a community around it. C'mon and join us!
 
-[![My Skills](https://skillicons.dev/icons?i=python,fastapi,flask,js,html,vscode,postman,docker)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=py,fastapi,flask,js,html,md,selenium,vscode,postman,docker,git,github,githubactions,bots,figma)](https://skillicons.dev)
 
 <p>
     <a a href="http://www.github.com/hasansezertasan">
