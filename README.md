@@ -15,11 +15,11 @@
 
 ---
 
-My name is Sezer, and I'm from Türkiye! I'm a self-taught developer who is passionate about writing code, solving problems, automating stuff, and building software (quite standard isn't it?).
+Hello, I am Sezer and I am from Turkey. I am a self-taught software developer, and my passions are writing code, solving problems, automating things, and building software (quite standard isn't it).
 
-I'm in love with open source and I'm learning new things every day. I like to spread my knowledge and help people but I'm not doing it very efficiently.
+I say knowledge increases as it is shared, so I share my knowledge and try to help people.
 
-Lately, I and some friends found [FastAPI Türkiye][fastapi-turkiye] to help people in Türkiye to learn FastAPI. We are actively working on the translation of the official documentation and we are planning to create a community around it. C'mon and join us!
+Me and a few of my friends founded [FastAPI Türkiye][fastapi-turkiye] to make FastAPI more accessible in Turkey. What do I mean by more accessible? Our first goal was to translate the entire FastAPI documentation into Turkish. While doing this, we create a community around it. C'mon and join us!
 
 [![My Skills](https://skillicons.dev/icons?i=py,fastapi,flask,js,html,md,selenium,vscode,postman,docker,git,github,githubactions,bots,figma)](https://skillicons.dev)
 
