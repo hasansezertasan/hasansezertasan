@@ -23,11 +23,7 @@ Me and a few of my friends founded [FastAPI Türkiye][fastapi-turkiye] to make F
 
 [![My Skills](https://skillicons.dev/icons?i=py,fastapi,flask,js,html,md,selenium,vscode,postman,docker,git,github,githubactions,bots,figma)](https://skillicons.dev)
 
-<p>
-    <a a href="http://www.github.com/hasansezertasan">
-        <img src="https://github-readme-stats.vercel.app/api?username=hasansezertasan&show_icons=true&hide=&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true" alt="Sezer's GitHub stats"/>
-    </a>
-</p>
+![Sezer's github stats](https://github-readme-stats.vercel.app/api?username=hasansezertasan&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&theme=synthwave)
 
 <!-- Links -->
 
