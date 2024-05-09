@@ -1,15 +1,26 @@
-audomo
-chrome-version
-cookiecutter
-flit
-frenchmaid
-hatch
-hwid
-pdm
-pipenv
-pipenv-resolver
-poe
-pygount
-pyscript
-twine
-virtualenv
+audomo 0.1.0
+chrome-version 0.3.1
+cookiecutter 2.6.0
+copier 9.1.1
+detect-secrets 1.4.0
+fastapix 0.1.0
+flit 3.9.0
+frenchmaid 0.2.3
+grip 4.6.2
+hatch 1.9.4
+hwid 0.1.0
+memestra 0.2.1
+pdm 2.13.1
+pipenv 2023.12.1
+pipreqs 0.5.0
+poethepoet 0.25.0
+pyarmor 8.5.2
+pygount 1.6.1
+pyscript 0.2.5
+requirements-builder 0.4.4
+safety 3.1.0
+twine 5.0.0
+typer-cli 0.0.13
+uv 0.1.26
+virtualenv 20.25.1
+virtualenvwrapper 6.1.0
