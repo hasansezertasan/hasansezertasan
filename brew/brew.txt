@@ -1,0 +1,10 @@
+gh
+docker
+visual-studio-code
+termius
+spotify
+rectangle
+maccy
+sqlite
+db-browser-for-sqlite
+python@3.12
