@@ -332,9 +332,16 @@
         {
             "Info": "",
             "Source": "main",
+            "Name": "pyenv",
+            "Version": "3.1.1",
+            "Updated": "\/Date(1715271842543)\/"
+        },
+        {
+            "Info": "",
+            "Source": "C:\\Users\\ian-i\\scoop\\buckets\\main\\bucket\\python.json",
             "Name": "python",
             "Version": "3.12.3",
-            "Updated": "\/Date(1715262384608)\/"
+            "Updated": "\/Date(1715271064731)\/"
         },
         {
             "Info": "",
@@ -369,7 +376,7 @@
             "Source": "main",
             "Name": "rye",
             "Version": "0.33.0",
-            "Updated": "\/Date(1715262399872)\/"
+            "Updated": "\/Date(1715268566111)\/"
         },
         {
             "Info": "",
