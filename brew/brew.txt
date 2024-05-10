@@ -7,4 +7,3 @@ rectangle
 maccy
 sqlite
 db-browser-for-sqlite
-python@3.12
