@@ -1,3 +1,4 @@
+pyenv
 gh
 docker
 visual-studio-code
