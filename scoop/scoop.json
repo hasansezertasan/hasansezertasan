@@ -4,9 +4,9 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1715258409000)\/",
+                "value": "\/Date(1715272584000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Thursday, May 9, 2024 3:40:09 PM"
+                "DateTime": "Thursday, May 9, 2024 7:36:24 PM"
             },
             "Manifests": 1325
         },
@@ -14,9 +14,9 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1715258032000)\/",
+                "value": "\/Date(1715272254000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Thursday, May 9, 2024 3:33:52 PM"
+                "DateTime": "Thursday, May 9, 2024 7:30:54 PM"
             },
             "Manifests": 2019
         },
@@ -24,9 +24,9 @@
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
             "Updated": {
-                "value": "\/Date(1715258747000)\/",
+                "value": "\/Date(1715272667000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Thursday, May 9, 2024 3:45:47 PM"
+                "DateTime": "Thursday, May 9, 2024 7:37:47 PM"
             },
             "Manifests": 455
         },
@@ -34,9 +34,9 @@
             "Name": "nonportable",
             "Source": "https://github.com/ScoopInstaller/Nonportable",
             "Updated": {
-                "value": "\/Date(1715243532000)\/",
+                "value": "\/Date(1715272667000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Thursday, May 9, 2024 11:32:12 AM"
+                "DateTime": "Thursday, May 9, 2024 7:37:47 PM"
             },
             "Manifests": 127
         }
@@ -292,7 +292,7 @@
             "Source": "main",
             "Name": "poetry",
             "Version": "1.8.3",
-            "Updated": "\/Date(1715263485241)\/"
+            "Updated": "\/Date(1715273923319)\/"
         },
         {
             "Info": "",
@@ -332,20 +332,6 @@
         {
             "Info": "",
             "Source": "main",
-            "Name": "pyenv",
-            "Version": "3.1.1",
-            "Updated": "\/Date(1715271842543)\/"
-        },
-        {
-            "Info": "",
-            "Source": "C:\\Users\\ian-i\\scoop\\buckets\\main\\bucket\\python.json",
-            "Name": "python",
-            "Version": "3.12.3",
-            "Updated": "\/Date(1715271064731)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main",
             "Name": "rclone",
             "Version": "1.66.0",
             "Updated": "\/Date(1710399403568)\/"
@@ -370,13 +356,6 @@
             "Name": "rustup-msvc",
             "Version": "1.27.1",
             "Updated": "\/Date(1715262942961)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main",
-            "Name": "rye",
-            "Version": "0.33.0",
-            "Updated": "\/Date(1715268566111)\/"
         },
         {
             "Info": "",
