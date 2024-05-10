@@ -9,3 +9,9 @@ Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv
 Remove-Item -Path "./install-pyenv-win.ps1"
 
 echo Installing Rye - Not Supported on Windows via PS yet
+
+echo Install PipX Packages
+Get-Content pipx-requirements.txt | ForEach-Object { pipx install $_ }
+
+echo Install Pip Requirements
+pip install -r requirements.txt
