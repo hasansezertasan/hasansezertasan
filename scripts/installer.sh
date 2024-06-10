@@ -3,7 +3,7 @@
 echo - Installing Brew
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-echo - Instlaling pyenv
+echo - Installing pyenv
 # curl https://pyenv.run | bash
 # TODO: How to install pyenv, through brew or curl?
 
