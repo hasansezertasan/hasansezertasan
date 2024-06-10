@@ -21,7 +21,7 @@ I say knowledge increases as it is shared, so I share my knowledge and try to he
 
 Me and a few of my friends founded [FastAPI Türkiye][fastapi-turkiye] to make FastAPI more accessible in Turkey. What do I mean by more accessible? Our first goal was to translate the entire FastAPI documentation into Turkish. While doing this, we create a community around it. C'mon and join us!
 
-[![My Skills](https://skillicons.dev/icons?i=py,fastapi,flask,js,html,md,selenium,vscode,postman,docker,git,github,githubactions,bots,figma)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=py,fastapi,flask,django,htmx,alpinejs,js,html,md,selenium,git,github,githubactions,vscode,docker,postman,bots,figma)](https://skillicons.dev)
 
 ![Sezer's github stats](https://github-readme-stats.vercel.app/api?username=hasansezertasan&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&theme=synthwave)
 
