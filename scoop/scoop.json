@@ -4,9 +4,9 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1717835192000)\/",
+                "value": "\/Date(1718800324000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Saturday, June 8, 2024 11:26:32 AM"
+                "DateTime": "Wednesday, June 19, 2024 3:32:04 PM"
             },
             "Manifests": 1327
         },
@@ -14,29 +14,39 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1717849979000)\/",
+                "value": "\/Date(1718800461000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Saturday, June 8, 2024 3:32:59 PM"
+                "DateTime": "Wednesday, June 19, 2024 3:34:21 PM"
             },
-            "Manifests": 2033
+            "Manifests": 2038
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
             "Updated": {
-                "value": "\/Date(1717850758000)\/",
+                "value": "\/Date(1718801317000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Saturday, June 8, 2024 3:45:58 PM"
+                "DateTime": "Wednesday, June 19, 2024 3:48:37 PM"
             },
             "Manifests": 463
+        },
+        {
+            "Name": "sysinternals",
+            "Source": "https://github.com/niheaven/scoop-sysinternals",
+            "Updated": {
+                "value": "\/Date(1718655992000)\/",
+                "DisplayHint": 2,
+                "DateTime": "Monday, June 17, 2024 11:26:32 PM"
+            },
+            "Manifests": 75
         },
         {
             "Name": "nonportable",
             "Source": "https://github.com/ScoopInstaller/Nonportable",
             "Updated": {
-                "value": "\/Date(1717810731000)\/",
+                "value": "\/Date(1718761259000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Saturday, June 8, 2024 4:38:51 AM"
+                "DateTime": "Wednesday, June 19, 2024 4:40:59 AM"
             },
             "Manifests": 127
         }
@@ -58,10 +68,52 @@
         },
         {
             "Info": "",
+            "Source": "extras",
+            "Name": "activitywatch",
+            "Version": "0.13.1",
+            "Updated": "\/Date(1718087528275)\/"
+        },
+        {
+            "Info": "",
             "Source": "main",
             "Name": "adb",
             "Version": "35.0.0",
             "Updated": "\/Date(1710399330187)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "affine",
+            "Version": "0.14.9",
+            "Updated": "\/Date(1718087615804)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "agg",
+            "Version": "1.4.3",
+            "Updated": "\/Date(1718098237072)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "airdroid",
+            "Version": "3.7.2.1",
+            "Updated": "\/Date(1718087621434)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "arduino-cli",
+            "Version": "1.0.0",
+            "Updated": "\/Date(1718802032974)\/"
+        },
+        {
+            "Info": "",
+            "Source": "sysinternals",
+            "Name": "autoruns",
+            "Version": "14.11",
+            "Updated": "\/Date(1718087643200)\/"
         },
         {
             "Info": "",
@@ -304,6 +356,13 @@
         {
             "Info": "",
             "Source": "main",
+            "Name": "msys2",
+            "Version": "2024-05-07",
+            "Updated": "\/Date(1718109873073)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
             "Name": "navi",
             "Version": "2.23.0",
             "Updated": "\/Date(1716611709936)\/"
@@ -349,6 +408,13 @@
             "Name": "pipx",
             "Version": "1.6.0",
             "Updated": "\/Date(1717400351499)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "powersession-rs",
+            "Version": "0.1.11",
+            "Updated": "\/Date(1718098250339)\/"
         },
         {
             "Info": "",
@@ -398,6 +464,13 @@
             "Name": "retroarch",
             "Version": "1.19.1",
             "Updated": "\/Date(1717714324804)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "ruby",
+            "Version": "3.3.2-1",
+            "Updated": "\/Date(1718109777629)\/"
         },
         {
             "Info": "",
@@ -501,15 +574,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "termius",
-            "Version": "8.12.5",
-            "Updated": "\/Date(1716561706869)\/"
+            "Version": "8.12.6",
+            "Updated": "\/Date(1718109580214)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "vlc",
-            "Version": "3.0.20",
-            "Updated": "\/Date(1700135776159)\/"
+            "Version": "3.0.21",
+            "Updated": "\/Date(1718109526967)\/"
         },
         {
             "Info": "",

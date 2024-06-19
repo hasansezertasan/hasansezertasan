@@ -1,11 +1,14 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-05-10T10:50:55.009-00:00",
+	"CreationDate" : "2024-06-19T16:02:06.188-00:00",
 	"Sources" : 
 	[
 		{
 			"Packages" : 
 			[
+				{
+					"PackageIdentifier" : "Melvin-Abraham.Google-Assistant"
+				},
 				{
 					"PackageIdentifier" : "Termius.Termius"
 				},
@@ -64,10 +67,16 @@
 					"PackageIdentifier" : "Mozilla.Firefox"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.OneDrive"
+				},
+				{
 					"PackageIdentifier" : "Opera.Opera"
 				},
 				{
 					"PackageIdentifier" : "Postman.Postman"
+				},
+				{
+					"PackageIdentifier" : "Miro.Miro"
 				},
 				{
 					"PackageIdentifier" : "Rye.Rye"
@@ -85,10 +94,19 @@
 					"PackageIdentifier" : "NZXT.CAM"
 				},
 				{
+					"PackageIdentifier" : "ClickUp.ClickUp"
+				},
+				{
 					"PackageIdentifier" : "ExodusMovement.Exodus"
 				},
 				{
 					"PackageIdentifier" : "qBittorrent.qBittorrent"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
@@ -101,9 +119,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.8"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
 				},
 				{
 					"PackageIdentifier" : "Nvidia.GeForceExperience"
