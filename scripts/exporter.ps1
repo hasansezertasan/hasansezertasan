@@ -14,3 +14,5 @@ pipx list --short > pipx-requirements.txt
 echo - Exporting Pip Requirements
 pip freeze > pip-requirements.txt
 
+echo - Exporting GitHub CLI Extensions
+gh extension list > gh-extensions.txt
