@@ -4,9 +4,9 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1718800324000)\/",
+                "value": "\/Date(1718872151000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Wednesday, June 19, 2024 3:32:04 PM"
+                "DateTime": "Thursday, June 20, 2024 11:29:11 AM"
             },
             "Manifests": 1327
         },
@@ -14,19 +14,19 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1718800461000)\/",
+                "value": "\/Date(1718872288000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Wednesday, June 19, 2024 3:34:21 PM"
+                "DateTime": "Thursday, June 20, 2024 11:31:28 AM"
             },
-            "Manifests": 2038
+            "Manifests": 2039
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
             "Updated": {
-                "value": "\/Date(1718801317000)\/",
+                "value": "\/Date(1718872457000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Wednesday, June 19, 2024 3:48:37 PM"
+                "DateTime": "Thursday, June 20, 2024 11:34:17 AM"
             },
             "Manifests": 463
         },
@@ -56,8 +56,8 @@
             "Info": "",
             "Source": "main",
             "Name": "7zip",
-            "Version": "24.06",
-            "Updated": "\/Date(1717400384591)\/"
+            "Version": "24.07",
+            "Updated": "\/Date(1718881076668)\/"
         },
         {
             "Info": "",
@@ -126,15 +126,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "bitwarden",
-            "Version": "2024.5.0",
-            "Updated": "\/Date(1716557922423)\/"
+            "Version": "2024.6.2",
+            "Updated": "\/Date(1718881055920)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "bitwarden-cli",
-            "Version": "2024.4.1",
-            "Updated": "\/Date(1715903592597)\/"
+            "Version": "2024.6.0",
+            "Updated": "\/Date(1718881071227)\/"
         },
         {
             "Info": "",
@@ -154,8 +154,8 @@
             "Info": "",
             "Source": "main",
             "Name": "curl",
-            "Version": "8.8.0_1",
-            "Updated": "\/Date(1716557928463)\/"
+            "Version": "8.8.0_2",
+            "Updated": "\/Date(1718880993163)\/"
         },
         {
             "Info": "",
@@ -163,6 +163,13 @@
             "Name": "dark",
             "Version": "3.14",
             "Updated": "\/Date(1708805757001)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "dart",
+            "Version": "3.4.4",
+            "Updated": "\/Date(1718878068262)\/"
         },
         {
             "Info": "",
@@ -189,8 +196,8 @@
             "Info": "",
             "Source": "main",
             "Name": "elixir",
-            "Version": "1.16.3",
-            "Updated": "\/Date(1717583870787)\/"
+            "Version": "1.17.1",
+            "Updated": "\/Date(1718880987902)\/"
         },
         {
             "Info": "",
@@ -224,8 +231,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "figma",
-            "Version": "124.0.2",
-            "Updated": "\/Date(1716676774722)\/"
+            "Version": "124.1.6",
+            "Updated": "\/Date(1718880982427)\/"
         },
         {
             "Info": "",
@@ -243,6 +250,13 @@
         },
         {
             "Info": "",
+            "Source": "extras",
+            "Name": "fvm",
+            "Version": "3.1.7",
+            "Updated": "\/Date(1718878126185)\/"
+        },
+        {
+            "Info": "",
             "Source": "main",
             "Name": "fzf",
             "Version": "0.53.0",
@@ -252,8 +266,8 @@
             "Info": "",
             "Source": "main",
             "Name": "gh",
-            "Version": "2.50.0",
-            "Updated": "\/Date(1717400359383)\/"
+            "Version": "2.51.0",
+            "Updated": "\/Date(1718881160654)\/"
         },
         {
             "Info": "",
@@ -294,8 +308,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "httptoolkit",
-            "Version": "1.16.0",
-            "Updated": "\/Date(1717567682590)\/"
+            "Version": "1.17.1",
+            "Updated": "\/Date(1718881153601)\/"
         },
         {
             "Info": "",
@@ -308,8 +322,8 @@
             "Info": "",
             "Source": "main",
             "Name": "just",
-            "Version": "1.28.0",
-            "Updated": "\/Date(1717854221626)\/"
+            "Version": "1.29.1",
+            "Updated": "\/Date(1718880799012)\/"
         },
         {
             "Info": "",
@@ -329,8 +343,8 @@
             "Info": "",
             "Source": "main",
             "Name": "luajit",
-            "Version": "2.1.1713773202-1",
-            "Updated": "\/Date(1717395153500)\/"
+            "Version": "2.1.1716656478-1",
+            "Updated": "\/Date(1718880803373)\/"
         },
         {
             "Info": "",
@@ -350,8 +364,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "mitmproxy",
-            "Version": "10.3.0",
-            "Updated": "\/Date(1714484364571)\/"
+            "Version": "10.3.1",
+            "Updated": "\/Date(1718880823128)\/"
         },
         {
             "Info": "",
@@ -455,8 +469,8 @@
             "Info": "",
             "Source": "main",
             "Name": "rclone",
-            "Version": "1.66.0",
-            "Updated": "\/Date(1710399403568)\/"
+            "Version": "1.67.0",
+            "Updated": "\/Date(1718880831428)\/"
         },
         {
             "Info": "",
@@ -469,8 +483,8 @@
             "Info": "",
             "Source": "main",
             "Name": "ruby",
-            "Version": "3.3.2-1",
-            "Updated": "\/Date(1718109777629)\/"
+            "Version": "3.3.3-1",
+            "Updated": "\/Date(1718880907554)\/"
         },
         {
             "Info": "",
@@ -504,8 +518,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "signal",
-            "Version": "7.11.1",
-            "Updated": "\/Date(1717567443932)\/"
+            "Version": "7.12.0",
+            "Updated": "\/Date(1718880939354)\/"
         },
         {
             "Info": "",
@@ -567,15 +581,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "telegram",
-            "Version": "5.1.5",
-            "Updated": "\/Date(1717854237013)\/"
+            "Version": "5.1.7",
+            "Updated": "\/Date(1718880955070)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "termius",
-            "Version": "8.12.6",
-            "Updated": "\/Date(1718109580214)\/"
+            "Version": "8.12.7",
+            "Updated": "\/Date(1718881202428)\/"
         },
         {
             "Info": "",
@@ -588,8 +602,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "vscode",
-            "Version": "1.90.0",
-            "Updated": "\/Date(1717854367082)\/"
+            "Version": "1.90.2",
+            "Updated": "\/Date(1718881246963)\/"
         },
         {
             "Info": "",
