@@ -4,39 +4,39 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1718872151000)\/",
+                "value": "\/Date(1720859214000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Thursday, June 20, 2024 11:29:11 AM"
+                "DateTime": "Saturday, July 13, 2024 11:26:54 AM"
             },
-            "Manifests": 1327
+            "Manifests": 1332
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1718872288000)\/",
+                "value": "\/Date(1720871370000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Thursday, June 20, 2024 11:31:28 AM"
+                "DateTime": "Saturday, July 13, 2024 2:49:30 PM"
             },
-            "Manifests": 2039
+            "Manifests": 2044
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
             "Updated": {
-                "value": "\/Date(1718872457000)\/",
+                "value": "\/Date(1720859494000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Thursday, June 20, 2024 11:34:17 AM"
+                "DateTime": "Saturday, July 13, 2024 11:31:34 AM"
             },
-            "Manifests": 463
+            "Manifests": 465
         },
         {
             "Name": "sysinternals",
             "Source": "https://github.com/niheaven/scoop-sysinternals",
             "Updated": {
-                "value": "\/Date(1718655992000)\/",
+                "value": "\/Date(1720797183000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Monday, June 17, 2024 11:26:32 PM"
+                "DateTime": "Friday, July 12, 2024 6:13:03 PM"
             },
             "Manifests": 75
         },
@@ -44,9 +44,9 @@
             "Name": "nonportable",
             "Source": "https://github.com/ScoopInstaller/Nonportable",
             "Updated": {
-                "value": "\/Date(1718761259000)\/",
+                "value": "\/Date(1720834919000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Wednesday, June 19, 2024 4:40:59 AM"
+                "DateTime": "Saturday, July 13, 2024 4:41:59 AM"
             },
             "Manifests": 127
         }
@@ -63,8 +63,8 @@
             "Info": "",
             "Source": "main",
             "Name": "act",
-            "Version": "0.2.63",
-            "Updated": "\/Date(1717400379329)\/"
+            "Version": "0.2.64",
+            "Updated": "\/Date(1720025863215)\/"
         },
         {
             "Info": "",
@@ -84,8 +84,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "affine",
-            "Version": "0.14.9",
-            "Updated": "\/Date(1718087615804)\/"
+            "Version": "0.15.4",
+            "Updated": "\/Date(1720615692737)\/"
         },
         {
             "Info": "",
@@ -105,8 +105,15 @@
             "Info": "",
             "Source": "main",
             "Name": "arduino-cli",
-            "Version": "1.0.0",
-            "Updated": "\/Date(1718802032974)\/"
+            "Version": "1.0.2",
+            "Updated": "\/Date(1720026091234)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "ast-grep",
+            "Version": "0.22.0",
+            "Updated": "\/Date(1718891406927)\/"
         },
         {
             "Info": "",
@@ -126,15 +133,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "bitwarden",
-            "Version": "2024.6.2",
-            "Updated": "\/Date(1718881055920)\/"
+            "Version": "2024.6.4",
+            "Updated": "\/Date(1720025937531)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "bitwarden-cli",
-            "Version": "2024.6.0",
-            "Updated": "\/Date(1718881071227)\/"
+            "Version": "2024.6.1",
+            "Updated": "\/Date(1720025945946)\/"
         },
         {
             "Info": "",
@@ -154,8 +161,8 @@
             "Info": "",
             "Source": "main",
             "Name": "curl",
-            "Version": "8.8.0_2",
-            "Updated": "\/Date(1718880993163)\/"
+            "Version": "8.8.0_3",
+            "Updated": "\/Date(1720025858364)\/"
         },
         {
             "Info": "",
@@ -182,8 +189,8 @@
             "Info": "",
             "Source": "main",
             "Name": "doctl",
-            "Version": "1.107.0",
-            "Updated": "\/Date(1717400372981)\/"
+            "Version": "1.109.1",
+            "Updated": "\/Date(1720779324422)\/"
         },
         {
             "Info": "",
@@ -196,8 +203,8 @@
             "Info": "",
             "Source": "main",
             "Name": "elixir",
-            "Version": "1.17.1",
-            "Updated": "\/Date(1718880987902)\/"
+            "Version": "1.17.2",
+            "Updated": "\/Date(1720510888979)\/"
         },
         {
             "Info": "",
@@ -210,8 +217,8 @@
             "Info": "",
             "Source": "main",
             "Name": "erlang",
-            "Version": "27.0",
-            "Updated": "\/Date(1717583864081)\/"
+            "Version": "27.0.1",
+            "Updated": "\/Date(1720779364864)\/"
         },
         {
             "Info": "",
@@ -231,15 +238,22 @@
             "Info": "",
             "Source": "extras",
             "Name": "figma",
-            "Version": "124.1.6",
-            "Updated": "\/Date(1718880982427)\/"
+            "Version": "124.1.16",
+            "Updated": "\/Date(1720025354987)\/"
+        },
+        {
+            "Info": "Install failed",
+            "Source": null,
+            "Name": "files-np",
+            "Version": null,
+            "Updated": "\/Date(1720871903385)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "filezilla",
-            "Version": "3.67.0",
-            "Updated": "\/Date(1714484343725)\/"
+            "Version": "3.67.1",
+            "Updated": "\/Date(1720779332023)\/"
         },
         {
             "Info": "",
@@ -266,15 +280,15 @@
             "Info": "",
             "Source": "main",
             "Name": "gh",
-            "Version": "2.51.0",
-            "Updated": "\/Date(1718881160654)\/"
+            "Version": "2.52.0",
+            "Updated": "\/Date(1720025339379)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "go",
-            "Version": "1.22.4",
-            "Updated": "\/Date(1717567583182)\/"
+            "Version": "1.22.5",
+            "Updated": "\/Date(1720088723476)\/"
         },
         {
             "Info": "Install failed",
@@ -287,15 +301,22 @@
             "Info": "",
             "Source": "nonportable",
             "Name": "grammarly-np",
-            "Version": "1.2.80.1426",
-            "Updated": "\/Date(1717854322547)\/"
+            "Version": "1.2.85.1447",
+            "Updated": "\/Date(1720862853183)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "grep",
+            "Version": "3.11",
+            "Updated": "\/Date(1718891412898)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "heidisql",
-            "Version": "12.7",
-            "Updated": "\/Date(1715262769619)\/"
+            "Version": "12.8",
+            "Updated": "\/Date(1720779318365)\/"
         },
         {
             "Info": "",
@@ -308,8 +329,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "httptoolkit",
-            "Version": "1.17.1",
-            "Updated": "\/Date(1718881153601)\/"
+            "Version": "1.18.0",
+            "Updated": "\/Date(1720164036051)\/"
         },
         {
             "Info": "",
@@ -322,8 +343,8 @@
             "Info": "",
             "Source": "main",
             "Name": "just",
-            "Version": "1.29.1",
-            "Updated": "\/Date(1718880799012)\/"
+            "Version": "1.30.1",
+            "Updated": "\/Date(1720510893605)\/"
         },
         {
             "Info": "",
@@ -343,8 +364,8 @@
             "Info": "",
             "Source": "main",
             "Name": "luajit",
-            "Version": "2.1.1716656478-1",
-            "Updated": "\/Date(1718880803373)\/"
+            "Version": "2.1.1720049189-1",
+            "Updated": "\/Date(1720321828508)\/"
         },
         {
             "Info": "",
@@ -434,8 +455,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "powertoys",
-            "Version": "0.81.1",
-            "Updated": "\/Date(1717542708006)\/"
+            "Version": "0.82.1",
+            "Updated": "\/Date(1720871094191)\/"
         },
         {
             "Info": "",
@@ -448,8 +469,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "protonmail-bridge",
-            "Version": "3.11.1",
-            "Updated": "\/Date(1716561748549)\/"
+            "Version": "3.12.0",
+            "Updated": "\/Date(1720026001248)\/"
         },
         {
             "Info": "Install failed",
@@ -464,6 +485,13 @@
             "Name": "putty",
             "Version": "0.81",
             "Updated": "\/Date(1714484478073)\/"
+        },
+        {
+            "Info": "Install failed",
+            "Source": null,
+            "Name": "qtranslate",
+            "Version": null,
+            "Updated": "\/Date(1720871908319)\/"
         },
         {
             "Info": "",
@@ -483,8 +511,8 @@
             "Info": "",
             "Source": "main",
             "Name": "ruby",
-            "Version": "3.3.3-1",
-            "Updated": "\/Date(1718880907554)\/"
+            "Version": "3.3.4-1",
+            "Updated": "\/Date(1720714154736)\/"
         },
         {
             "Info": "",
@@ -496,9 +524,16 @@
         {
             "Info": "",
             "Source": "main",
+            "Name": "scoop-search",
+            "Version": "1.5.0",
+            "Updated": "\/Date(1720510921287)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
             "Name": "scrcpy",
-            "Version": "2.4",
-            "Updated": "\/Date(1709592466067)\/"
+            "Version": "2.5",
+            "Updated": "\/Date(1720026007241)\/"
         },
         {
             "Info": "",
@@ -518,8 +553,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "signal",
-            "Version": "7.12.0",
-            "Updated": "\/Date(1718880939354)\/"
+            "Version": "7.15.0",
+            "Updated": "\/Date(1720026026673)\/"
         },
         {
             "Info": "",
@@ -560,8 +595,8 @@
             "Info": "",
             "Source": "main",
             "Name": "syncthing",
-            "Version": "1.27.8",
-            "Updated": "\/Date(1717567407925)\/"
+            "Version": "1.27.9",
+            "Updated": "\/Date(1720025462882)\/"
         },
         {
             "Info": "",
@@ -574,22 +609,22 @@
             "Info": "",
             "Source": "extras",
             "Name": "tabby",
-            "Version": "1.0.207",
-            "Updated": "\/Date(1710141299968)\/"
+            "Version": "1.0.209",
+            "Updated": "\/Date(1720714174215)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "telegram",
-            "Version": "5.1.7",
-            "Updated": "\/Date(1718880955070)\/"
+            "Version": "5.2.3",
+            "Updated": "\/Date(1720510906934)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "termius",
-            "Version": "8.12.7",
-            "Updated": "\/Date(1718881202428)\/"
+            "Version": "9.0.0",
+            "Updated": "\/Date(1720615749605)\/"
         },
         {
             "Info": "",
@@ -602,22 +637,36 @@
             "Info": "",
             "Source": "extras",
             "Name": "vscode",
-            "Version": "1.90.2",
-            "Updated": "\/Date(1718881246963)\/"
+            "Version": "1.91.1",
+            "Updated": "\/Date(1720805218727)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "wasm4",
+            "Version": "2.7.0",
+            "Updated": "\/Date(1718891486444)\/"
+        },
+        {
+            "Info": "Install failed",
+            "Source": null,
+            "Name": "wasmer",
+            "Version": null,
+            "Updated": "\/Date(1720862881211)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "windows-terminal",
-            "Version": "1.20.11381.0",
-            "Updated": "\/Date(1717855122877)\/"
+            "Version": "1.20.11781.0",
+            "Updated": "\/Date(1720026057526)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "wingetui",
-            "Version": "3.0.2",
-            "Updated": "\/Date(1714484650405)\/"
+            "Version": "3.1.0",
+            "Updated": "\/Date(1720025384610)\/"
         },
         {
             "Info": "",
