@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-07-13T14:58:40.998-00:00",
+	"CreationDate" : "2024-10-25T07:43:52.946-00:00",
 	"Sources" : 
 	[
 		{
@@ -22,10 +22,10 @@
 					"PackageIdentifier" : "Docker.DockerDesktop"
 				},
 				{
-					"PackageIdentifier" : "FxSoundLLC.FxSound"
+					"PackageIdentifier" : "Git.Git"
 				},
 				{
-					"PackageIdentifier" : "Git.Git"
+					"PackageIdentifier" : "Logitech.UnifyingSoftware"
 				},
 				{
 					"PackageIdentifier" : "Mozilla.Firefox"
@@ -37,7 +37,22 @@
 					"PackageIdentifier" : "NZXT.CAM"
 				},
 				{
+					"PackageIdentifier" : "FxSound.FxSound"
+				},
+				{
+					"PackageIdentifier" : "AdrienAllard.FileConverter"
+				},
+				{
 					"PackageIdentifier" : "Google.GoogleDrive"
+				},
+				{
+					"PackageIdentifier" : "Oracle.JavaRuntimeEnvironment"
+				},
+				{
+					"PackageIdentifier" : "Logitech.OptionsPlus"
+				},
+				{
+					"PackageIdentifier" : "Cloudflare.Warp"
 				},
 				{
 					"PackageIdentifier" : "Nvidia.GeForceExperience"
@@ -46,7 +61,7 @@
 					"PackageIdentifier" : "Nvidia.PhysX"
 				},
 				{
-					"PackageIdentifier" : "Cloudflare.Warp"
+					"PackageIdentifier" : "TechPowerUp.NVCleanstall"
 				},
 				{
 					"PackageIdentifier" : "Google.Chrome.EXE"
@@ -58,6 +73,9 @@
 					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime"
 				},
 				{
+					"PackageIdentifier" : "Seagate.SeaTools"
+				},
+				{
 					"PackageIdentifier" : "Valve.Steam"
 				},
 				{
@@ -67,19 +85,25 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.8"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.8"
+					"PackageIdentifier" : "Google.ChromeRemoteDesktopHost"
+				},
+				{
+					"PackageIdentifier" : "emoacht.Monitorian"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
 				},
 				{
-					"PackageIdentifier" : "Google.ChromeRemoteDesktopHost"
+					"PackageIdentifier" : "Miro.Miro"
 				},
 				{
 					"PackageIdentifier" : "Melvin-Abraham.Google-Assistant"
@@ -103,9 +127,6 @@
 					"PackageIdentifier" : "Postman.Postman"
 				},
 				{
-					"PackageIdentifier" : "Miro.Miro"
-				},
-				{
 					"PackageIdentifier" : "Rye.Rye"
 				},
 				{
@@ -118,7 +139,7 @@
 					"PackageIdentifier" : "ClickUp.ClickUp"
 				},
 				{
-					"PackageIdentifier" : "ExodusMovement.Exodus"
+					"PackageIdentifier" : "Amazon.Games"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.AppInstaller"
@@ -131,6 +152,9 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCLibs.Desktop.14"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DevHome"
 				}
 			],
 			"SourceDetails" : 

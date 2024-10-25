@@ -4,39 +4,39 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1720859214000)\/",
+                "value": "\/Date(1729471000000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Saturday, July 13, 2024 11:26:54 AM"
+                "DateTime": "Monday, October 21, 2024 3:36:40 AM"
             },
-            "Manifests": 1332
+            "Manifests": 1344
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1720871370000)\/",
+                "value": "\/Date(1729471155000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Saturday, July 13, 2024 2:49:30 PM"
+                "DateTime": "Monday, October 21, 2024 3:39:15 AM"
             },
-            "Manifests": 2044
+            "Manifests": 2090
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
             "Updated": {
-                "value": "\/Date(1720859494000)\/",
+                "value": "\/Date(1729456301000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Saturday, July 13, 2024 11:31:34 AM"
+                "DateTime": "Sunday, October 20, 2024 11:31:41 PM"
             },
-            "Manifests": 465
+            "Manifests": 469
         },
         {
             "Name": "sysinternals",
             "Source": "https://github.com/niheaven/scoop-sysinternals",
             "Updated": {
-                "value": "\/Date(1720797183000)\/",
+                "value": "\/Date(1721752640000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Friday, July 12, 2024 6:13:03 PM"
+                "DateTime": "Tuesday, July 23, 2024 7:37:20 PM"
             },
             "Manifests": 75
         },
@@ -44,11 +44,21 @@
             "Name": "nonportable",
             "Source": "https://github.com/ScoopInstaller/Nonportable",
             "Updated": {
-                "value": "\/Date(1720834919000)\/",
+                "value": "\/Date(1729442328000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Saturday, July 13, 2024 4:41:59 AM"
+                "DateTime": "Sunday, October 20, 2024 7:38:48 PM"
             },
             "Manifests": 127
+        },
+        {
+            "Name": "java",
+            "Source": "https://github.com/ScoopInstaller/Java",
+            "Updated": {
+                "value": "\/Date(1729196371000)\/",
+                "DisplayHint": 2,
+                "DateTime": "Thursday, October 17, 2024 11:19:31 PM"
+            },
+            "Manifests": 294
         }
     ],
     "apps": [
@@ -63,8 +73,8 @@
             "Info": "",
             "Source": "main",
             "Name": "act",
-            "Version": "0.2.64",
-            "Updated": "\/Date(1720025863215)\/"
+            "Version": "0.2.65",
+            "Updated": "\/Date(1722631901644)\/"
         },
         {
             "Info": "",
@@ -83,9 +93,16 @@
         {
             "Info": "",
             "Source": "extras",
+            "Name": "advancedrenamer",
+            "Version": "3.95",
+            "Updated": "\/Date(1726796274499)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
             "Name": "affine",
-            "Version": "0.15.4",
-            "Updated": "\/Date(1720615692737)\/"
+            "Version": "0.15.7",
+            "Updated": "\/Date(1721807607493)\/"
         },
         {
             "Info": "",
@@ -103,10 +120,17 @@
         },
         {
             "Info": "",
+            "Source": "extras",
+            "Name": "altsnap",
+            "Version": "1.63",
+            "Updated": "\/Date(1726795932324)\/"
+        },
+        {
+            "Info": "",
             "Source": "main",
             "Name": "arduino-cli",
-            "Version": "1.0.2",
-            "Updated": "\/Date(1720026091234)\/"
+            "Version": "1.0.3",
+            "Updated": "\/Date(1721807575514)\/"
         },
         {
             "Info": "",
@@ -133,15 +157,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "bitwarden",
-            "Version": "2024.6.4",
-            "Updated": "\/Date(1720025937531)\/"
+            "Version": "2024.7.1",
+            "Updated": "\/Date(1722339257794)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "bitwarden-cli",
-            "Version": "2024.6.1",
-            "Updated": "\/Date(1720025945946)\/"
+            "Version": "2024.7.2",
+            "Updated": "\/Date(1722431416094)\/"
         },
         {
             "Info": "",
@@ -152,17 +176,52 @@
         },
         {
             "Info": "",
+            "Source": "extras",
+            "Name": "bulk-crap-uninstaller",
+            "Version": "5.8.1",
+            "Updated": "\/Date(1726795749813)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "calibre",
+            "Version": "7.18.0",
+            "Updated": "\/Date(1726796292863)\/"
+        },
+        {
+            "Info": "",
             "Source": "main",
             "Name": "cloc",
-            "Version": "2.00",
-            "Updated": "\/Date(1708388862662)\/"
+            "Version": "2.02",
+            "Updated": "\/Date(1722788451517)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "curl",
-            "Version": "8.8.0_3",
-            "Updated": "\/Date(1720025858364)\/"
+            "Version": "8.9.1_1",
+            "Updated": "\/Date(1722631906588)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "cwrsync",
+            "Version": "6.3.1",
+            "Updated": "\/Date(1729471904477)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "czkawka",
+            "Version": "7.0.0",
+            "Updated": "\/Date(1726797412222)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "czkawka-gui",
+            "Version": "7.0.0",
+            "Updated": "\/Date(1726797440882)\/"
         },
         {
             "Info": "",
@@ -175,8 +234,8 @@
             "Info": "",
             "Source": "main",
             "Name": "dart",
-            "Version": "3.4.4",
-            "Updated": "\/Date(1718878068262)\/"
+            "Version": "3.5.0",
+            "Updated": "\/Date(1723076509594)\/"
         },
         {
             "Info": "",
@@ -189,8 +248,15 @@
             "Info": "",
             "Source": "main",
             "Name": "doctl",
-            "Version": "1.109.1",
-            "Updated": "\/Date(1720779324422)\/"
+            "Version": "1.110.0",
+            "Updated": "\/Date(1722339174568)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "duplicati",
+            "Version": "2.0.8.1_beta_2024-05-07",
+            "Updated": "\/Date(1726797509750)\/"
         },
         {
             "Info": "",
@@ -222,24 +288,45 @@
         },
         {
             "Info": "",
+            "Source": "main",
+            "Name": "espanso",
+            "Version": "2.2.1",
+            "Updated": "\/Date(1726796073630)\/"
+        },
+        {
+            "Info": "",
             "Source": "extras",
             "Name": "everything",
-            "Version": "1.4.1.1024",
-            "Updated": "\/Date(1693112883320)\/"
+            "Version": "1.4.1.1026",
+            "Updated": "\/Date(1722631911953)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "exifcleaner",
+            "Version": "3.6.0",
+            "Updated": "\/Date(1726797787267)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "fiddler",
-            "Version": "5.0.20243.10853",
-            "Updated": "\/Date(1717400364573)\/"
+            "Version": "5.0.20244.10953",
+            "Updated": "\/Date(1723076418576)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "figma",
-            "Version": "124.1.16",
-            "Updated": "\/Date(1720025354987)\/"
+            "Version": "124.2.9",
+            "Updated": "\/Date(1722339273478)\/"
+        },
+        {
+            "Info": "",
+            "Source": "nonportable",
+            "Name": "file-converter-np",
+            "Version": "1.2.3",
+            "Updated": "\/Date(1726798008864)\/"
         },
         {
             "Info": "Install failed",
@@ -273,29 +360,22 @@
             "Info": "",
             "Source": "main",
             "Name": "fzf",
-            "Version": "0.53.0",
-            "Updated": "\/Date(1717854217387)\/"
+            "Version": "0.54.3",
+            "Updated": "\/Date(1722631896530)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "gh",
-            "Version": "2.52.0",
-            "Updated": "\/Date(1720025339379)\/"
+            "Version": "2.54.0",
+            "Updated": "\/Date(1722631891990)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "go",
-            "Version": "1.22.5",
-            "Updated": "\/Date(1720088723476)\/"
-        },
-        {
-            "Info": "Install failed",
-            "Source": null,
-            "Name": "goodsync-np",
-            "Version": null,
-            "Updated": "\/Date(1712445487048)\/"
+            "Version": "1.22.6",
+            "Updated": "\/Date(1723076465693)\/"
         },
         {
             "Info": "",
@@ -310,6 +390,13 @@
             "Name": "grep",
             "Version": "3.11",
             "Updated": "\/Date(1718891412898)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "handbrake",
+            "Version": "1.8.2",
+            "Updated": "\/Date(1726795765377)\/"
         },
         {
             "Info": "",
@@ -329,8 +416,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "httptoolkit",
-            "Version": "1.18.0",
-            "Updated": "\/Date(1720164036051)\/"
+            "Version": "1.18.1",
+            "Updated": "\/Date(1721118119636)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "hwinfo",
+            "Version": "8.10-5520",
+            "Updated": "\/Date(1726796010507)\/"
         },
         {
             "Info": "",
@@ -343,8 +437,22 @@
             "Info": "",
             "Source": "main",
             "Name": "just",
-            "Version": "1.30.1",
-            "Updated": "\/Date(1720510893605)\/"
+            "Version": "1.34.0",
+            "Updated": "\/Date(1722788456143)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "kdeconnect",
+            "Version": "24.02-3692",
+            "Updated": "\/Date(1727258781529)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "languagetool-java",
+            "Version": "6.4",
+            "Updated": "\/Date(1721136377342)\/"
         },
         {
             "Info": "",
@@ -355,10 +463,17 @@
         },
         {
             "Info": "",
+            "Source": "extras",
+            "Name": "localsend",
+            "Version": "1.15.4",
+            "Updated": "\/Date(1726795764990)\/"
+        },
+        {
+            "Info": "",
             "Source": "main",
             "Name": "lua",
-            "Version": "5.4.2",
-            "Updated": "\/Date(1717393719788)\/"
+            "Version": "5.4.7-2",
+            "Updated": "\/Date(1721807552491)\/"
         },
         {
             "Info": "",
@@ -385,15 +500,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "mitmproxy",
-            "Version": "10.3.1",
-            "Updated": "\/Date(1718880823128)\/"
+            "Version": "10.4.2",
+            "Updated": "\/Date(1722631881002)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "msys2",
-            "Version": "2024-05-07",
-            "Updated": "\/Date(1718109873073)\/"
+            "Version": "2024-07-27",
+            "Updated": "\/Date(1722339228123)\/"
         },
         {
             "Info": "",
@@ -401,6 +516,13 @@
             "Name": "navi",
             "Version": "2.23.0",
             "Updated": "\/Date(1716611709936)\/"
+        },
+        {
+            "Info": "Install failed",
+            "Source": null,
+            "Name": "nvcleanstall",
+            "Version": null,
+            "Updated": "\/Date(1726796312083)\/"
         },
         {
             "Info": "",
@@ -413,8 +535,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "obs-studio",
-            "Version": "30.1.2",
-            "Updated": "\/Date(1712444269432)\/"
+            "Version": "30.2.2",
+            "Updated": "\/Date(1721807547214)\/"
         },
         {
             "Info": "",
@@ -432,6 +554,13 @@
         },
         {
             "Info": "",
+            "Source": "java",
+            "Name": "oraclejdk",
+            "Version": "22.0.2",
+            "Updated": "\/Date(1721213708984)\/"
+        },
+        {
+            "Info": "",
             "Source": "nonportable",
             "Name": "peace-np",
             "Version": "1.6.6.0",
@@ -446,6 +575,13 @@
         },
         {
             "Info": "",
+            "Source": "nonportable",
+            "Name": "portmaster-np",
+            "Version": "1.0.13",
+            "Updated": "\/Date(1726798447925)\/"
+        },
+        {
+            "Info": "",
             "Source": "main",
             "Name": "powersession-rs",
             "Version": "0.1.11",
@@ -455,8 +591,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "powertoys",
-            "Version": "0.82.1",
-            "Updated": "\/Date(1720871094191)\/"
+            "Version": "0.83.0",
+            "Updated": "\/Date(1722431403739)\/"
         },
         {
             "Info": "",
@@ -491,7 +627,14 @@
             "Source": null,
             "Name": "qtranslate",
             "Version": null,
-            "Updated": "\/Date(1720871908319)\/"
+            "Updated": "\/Date(1721810592288)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "quick-picture-viewer",
+            "Version": "3.1.4",
+            "Updated": "\/Date(1726795817165)\/"
         },
         {
             "Info": "",
@@ -503,16 +646,16 @@
         {
             "Info": "",
             "Source": "extras",
-            "Name": "retroarch",
-            "Version": "1.19.1",
-            "Updated": "\/Date(1717714324804)\/"
+            "Name": "rclone-browser",
+            "Version": "1.8.0",
+            "Updated": "\/Date(1729472284066)\/"
         },
         {
             "Info": "",
-            "Source": "main",
-            "Name": "ruby",
-            "Version": "3.3.4-1",
-            "Updated": "\/Date(1720714154736)\/"
+            "Source": "extras",
+            "Name": "retroarch",
+            "Version": "1.19.1",
+            "Updated": "\/Date(1717714324804)\/"
         },
         {
             "Info": "",
@@ -532,8 +675,8 @@
             "Info": "",
             "Source": "main",
             "Name": "scrcpy",
-            "Version": "2.5",
-            "Updated": "\/Date(1720026007241)\/"
+            "Version": "2.6.1",
+            "Updated": "\/Date(1722788462708)\/"
         },
         {
             "Info": "",
@@ -553,8 +696,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "signal",
-            "Version": "7.15.0",
-            "Updated": "\/Date(1720026026673)\/"
+            "Version": "7.19.0",
+            "Updated": "\/Date(1723076413853)\/"
         },
         {
             "Info": "",
@@ -574,8 +717,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "sqlitebrowser",
-            "Version": "3.12.2",
-            "Updated": "\/Date(1693222040873)\/"
+            "Version": "3.13.0",
+            "Updated": "\/Date(1721807493319)\/"
         },
         {
             "Info": "",
@@ -587,44 +730,44 @@
         {
             "Info": "",
             "Source": "main",
-            "Name": "syncany-cli",
-            "Version": "0.4.9",
-            "Updated": "\/Date(1695465365373)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main",
             "Name": "syncthing",
-            "Version": "1.27.9",
-            "Updated": "\/Date(1720025462882)\/"
+            "Version": "1.27.12",
+            "Updated": "\/Date(1726796919048)\/"
         },
         {
             "Info": "",
             "Source": "extras",
-            "Name": "synctoy",
-            "Version": "2.1",
-            "Updated": "\/Date(1694806413212)\/"
+            "Name": "syncthingctl",
+            "Version": "1.6.2",
+            "Updated": "\/Date(1726796959356)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "syncthingtray",
+            "Version": "1.6.2",
+            "Updated": "\/Date(1726796931598)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "tabby",
-            "Version": "1.0.209",
-            "Updated": "\/Date(1720714174215)\/"
+            "Version": "1.0.211",
+            "Updated": "\/Date(1721807486452)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "telegram",
-            "Version": "5.2.3",
-            "Updated": "\/Date(1720510906934)\/"
+            "Version": "5.3.1",
+            "Updated": "\/Date(1722631767842)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "termius",
-            "Version": "9.0.0",
-            "Updated": "\/Date(1720615749605)\/"
+            "Version": "9.2.0",
+            "Updated": "\/Date(1722631825357)\/"
         },
         {
             "Info": "",
@@ -637,8 +780,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "vscode",
-            "Version": "1.91.1",
-            "Updated": "\/Date(1720805218727)\/"
+            "Version": "1.92.0",
+            "Updated": "\/Date(1722631849519)\/"
         },
         {
             "Info": "",
@@ -660,13 +803,6 @@
             "Name": "windows-terminal",
             "Version": "1.20.11781.0",
             "Updated": "\/Date(1720026057526)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
-            "Name": "wingetui",
-            "Version": "3.1.0",
-            "Updated": "\/Date(1720025384610)\/"
         },
         {
             "Info": "",
