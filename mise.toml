@@ -11,6 +11,7 @@ taplo = "0.9.3"
 "pipx:mkdocs" = { version = "1.6.1", extras = "i18n", uvx_args = "--with-requirements requirements.txt" }
 editorconfig-checker = "3.3.0"
 "npm:wrangler" = "4.16.1"
+mask = "0.11.6"
 
 [tasks."style:lint"]
 description = "Linting"
@@ -24,7 +25,7 @@ mise exec typos -- typos .
 """
 
 [tasks."style:format"]
-description = "Run the formatters"
+description = "Formatting"
 run = """
 mise exec yamlfmt -- yamlfmt .
 mise exec taplo -- taplo format .
@@ -35,11 +36,11 @@ depends = ["style:lint", "style:format"]
 run = "echo 'All style checks passed!'"
 
 [tasks."docs:serve"]
-description = "Serving Docs"
+description = "Serving the documentation"
 run = "mise exec pipx:mkdocs -- mkdocs serve"
 
 
 [tasks."docs:build"]
-description = "Building Docs"
+description = "Building the documentation"
 depends = ["style:lint", "style:format"]
 run = "mise exec pipx:mkdocs -- mkdocs build --clean"
