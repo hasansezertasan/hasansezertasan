@@ -1,0 +1,43 @@
+---
+site_name: Hasan Sezer Taşan
+site_description: Hasan Sezer Taşan
+site_url: https://hasansezertasan.github.io/hasansezertasan
+repo_name: hasansezertasan/hasansezertasan
+repo_url: https://github.com/hasansezertasan/hasansezertasan
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: purple
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: "Switch to dark mode"
+    - scheme: slate
+      primary: purple
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: "Switch to light mode"
+  features:
+    - navigation.sections
+plugins:
+  - blog:
+      blog_dir: .
+  - search
+  - tags
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+nav:
+  - index.md
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/hasansezertasan/
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/hasansezertasan
+    - icon: fontawesome/brands/github
+      link: https://github.com/hasansezertasan

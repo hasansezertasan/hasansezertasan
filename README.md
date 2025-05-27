@@ -1,5 +1,6 @@
 # Hi there! :wave:
 
+<!-- markdownlint-disable MD033 -->
 <a href="https://www.twitter.com/hasansezertasan" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/twitter/follow/hasansezertasan?logo=twitter&style=for-the-badge&color=0891b2&labelColor=1c1917" alt="Twitter Follow"/>
 </a>
@@ -12,6 +13,7 @@
 <a href="https://www.github.com/hasansezertasan" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/github/followers/hasansezertasan?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" alt="GitHub Followers"/>
 </a>
+<!-- markdownlint-enable MD033 -->
 
 ---
 
