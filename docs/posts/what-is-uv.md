@@ -1,13 +1,13 @@
 ---
 draft: true
 date:
-  created: 2025-05-25
+  created: 2025-05-27
   updated: 2025-05-27
 categories:
-  - mise
+  - uv
   - devtools
   - what-is
-slug: what-is-mise
+slug: what-is-uv
 ---
 
-# What is `mise`?
+# What is `uv`?
