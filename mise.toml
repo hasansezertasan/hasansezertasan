@@ -32,7 +32,7 @@ mise exec taplo -- taplo format .
 [tasks."style:ci"]
 description = "CI tasks"
 depends = ["style:lint", "style:format"]
-run = "echo 'CI tasks are not defined yet.'"
+run = "echo 'All style checks passed!'"
 
 [tasks."docs:serve"]
 description = "Serving Docs"
