@@ -1,2 +1,2 @@
-#!/usr/bin/env python3
+#!/usr/bin/env sh
 # * Created for GitHub Repository Language Analysis
