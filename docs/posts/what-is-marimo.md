@@ -12,7 +12,7 @@ slug: what-is-marimo
 
 # What is `marimo`?
 
-There are great advancements in the Python tooling lately. `ruff` shined with its linting and formatting capabilities. `uv` is a great package and project manager (along side with a lot of other features), `ty` and `pyrefly` are coming for the type checking and static analysis. They are all great tools that I use daily. And there is this one tool that I started using recently and I am loving it.
+There are great advancements in the Python tooling lately. `ruff` shined with its linting and formatting capabilities. `uv` is a great package and project manager (alongside many other features), `ty` and `pyrefly` are coming for the type checking and static analysis. They are all great tools that I use daily. And there is this one tool that I started using recently and I am loving it.
 
 `marimo` is one of the best tools I have used so far.
 
