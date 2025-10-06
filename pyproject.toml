@@ -1,0 +1,59 @@
+[project]
+name = "hasansezertasan"
+version = "0.1.0"
+description = "I'm Sezer, a Software Developer 🦾"
+readme = "README.md" # TODO @hasansezertasan: Add a README.md file, don't just use the README.md file from the root directory.
+license = { text = "MIT" }
+authors = [{ name = "Hasan Sezer Taşan", email = "hasansezertasan@gmail.com" }]
+maintainers = [
+  { name = "Hasan Sezer Taşan", email = "hasansezertasan@gmail.com" },
+]
+requires-python = ">=3.6" # Even though I started with 2.7...
+dependencies = []
+
+
+[project.scripts]
+hasansezertasan = "hasansezertasan.main:main"
+
+
+[project.urls]
+website = "https://hasansezertasan.com"
+github = "https://github.com/hasansezertasan"
+linkedin = "https://www.linkedin.com/in/hasansezertasan"
+mastodon = "https://hachyderm.io/@hasansezertasan"
+twitter = "https://twitter.com/hasansezertasan"
+youtube = "https://www.youtube.com/@hasansezertasan"
+mail = "mailto:hasansezertasan@gmail.com"
+pypi = "https://pypi.org/user/hasansezertasan"
+
+
+[tool.poetry.dependencies]
+python = ">=3.8, <4.0"
+mkdocs = { extras = ["i18n"], version = "^1.5.3" }
+mkdocs-material = "9.4.7"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.0"
+mypy = ">=1.0.0"
+ruff = "==0.13.0"
+pre-commit = ">=2.20.0, <4.0.0"
+proselint = "^0.13.0"
+yamllint = "^1.32.0"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.pymarkdown]
+plugins.MD013.enabled = false
+plugins.MD003.style = "atx"
+plugins.MD004.style = "asterisk"
+plugins.MD007.indent = 4
+# Escape disables...
+plugins.MD033.enabled = false
+plugins.MD041.enabled = false
+plugins.MD022.enabled = false
+plugins.MD003.enabled = false

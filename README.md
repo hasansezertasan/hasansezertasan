@@ -17,15 +17,15 @@
 
 ---
 
-Self-Taught Software Developer with expertise in Web Scraping, Web Development, and Backend Engineering. Skilled in reverse-engineering private APIs. Proficient in rapidly building scalable web applications using modern frameworks such as FastAPI, Flask, Django, and HTMX. Active open-source contributor with a strong focus on delivering efficient and maintainable solutions.
+👨‍💻 Self-taught Software Developer passionate about 🚀 Web Scraping, 🌐 Web Development, and 🛠️ Backend Engineering. 🕵️‍♂️ Skilled in reverse-engineering private APIs. ⚡ Proficient at rapidly building scalable web applications using modern frameworks like [FastAPI], [Litestar], [Flask], [Django], and [HTMX]. 🤝 Active open-source contributor focused on delivering efficient and maintainable solutions! ✨
 
-## Languages
+## Languages and Frameworks
 
-[![Languages](https://skillicons.dev/icons?i=python,bash,javascript,html,css,md&perline=6)][skillicons]
+[![Languages](https://skillicons.dev/icons?i=python,bash,javascript,html,css,md,nodejs,selenium,fastapi,flask,django,htmx,alpinejs,bootstrap&perline=6)][skillicons]
 
 ## Tools & Platforms
 
-[![Tools & Platforms](https://skillicons.dev/icons?i=ubuntu,docker,kubernetes,git,github,githubactions,gcp,cloudflare,workers,netlify,postman,bots,mongodb,redis,sqlite,mysql,postgres,figma,neovim,vscode,selenium,nodejs,fastapi,flask,django,htmx,alpinejs,bootstrap&perline=6)][skillicons]
+[![Tools & Platforms](https://skillicons.dev/icons?i=vscode,figma,ubuntu,docker,kubernetes,gcp,cloudflare,netlify,mongodb,redis,sqlite,mysql,postgres,postman,bots,git,github,githubactions&perline=6)][skillicons]
 
 ## Stats
 
@@ -35,3 +35,8 @@ Self-Taught Software Developer with expertise in Web Scraping, Web Development, 
 
 <!-- [fastapi-turkiye]: http://hasansezertasan.github.io/fastapi-turkiye -->
 [skillicons]: https://skillicons.dev
+[Flask]: https://github.com/pallets/flask
+[FastAPI]: https://github.com/fastapi/fastapi
+[Litestar]: https://github.com/litestar-org/litestar
+[Django]: https://github.com/django/django
+[HTMX]: https://github.com/bigskysoftware/htmx
