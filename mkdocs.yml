@@ -4,6 +4,7 @@ site_description: Hasan Sezer Taşan
 site_url: https://hasansezertasan.github.io/hasansezertasan
 repo_name: hasansezertasan/hasansezertasan
 repo_url: https://github.com/hasansezertasan/hasansezertasan
+edit_uri: https://github.com/hasansezertasan/hasansezertasan
 theme:
   name: material
   language: en
@@ -22,22 +23,59 @@ theme:
         name: "Switch to light mode"
   features:
     - navigation.sections
+    # - content.action.view
+    # - content.code.annotate
+    # - content.code.copy
+    # - content.tabs.link
+    # - search.suggest
+    # - search.highlight
+    # - navigation.instant
+    # - navigation.footer
+    # - navigation.sections
+    # - navigation.top
+    # - navigation.tabs
 plugins:
   - blog:
       blog_dir: .
   - search
   - tags
 markdown_extensions:
+  # - toc:
+  #     permalink: true
+  #     title: İçindekiler
+  # - abbr
+  # - admonition
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # - pymdownx.details
+  # - pymdownx.inlinehilite
+  # - pymdownx.snippets:
+  #     auto_append:
+  #       - docs/includes/abbreviations.md
+  #       - docs/includes/refs.md
+  # - pymdownx.superfences
+  # - pymdownx.highlight:
+  #     anchor_linenums: true
+  # - pymdownx.tasklist:
+  #     custom_checkbox: true
+  # - pymdownx.tabbed:
+  #     alternate_style: true
+  # - attr_list
+  # - md_in_html
+  # - tables
+  # - def_list
 nav:
   - index.md
 extra:
   social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/hasansezertasan
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/hasansezertasan
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/hasansezertasan/
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/hasansezertasan/
     - icon: fontawesome/brands/medium
-      link: https://medium.com/hasansezertasan
-    - icon: fontawesome/brands/github
-      link: https://github.com/hasansezertasan
+      link: https://medium.com/@hasansezertasan

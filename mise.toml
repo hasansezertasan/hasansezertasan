@@ -1,5 +1,5 @@
 [tools]
-uv = "0.7.8"
+uv = "latest"
 actionlint = "1.7.7"
 action-validator = "0.6.0"
 markdownlint-cli2 = "0.18.1"
@@ -11,8 +11,10 @@ taplo = "0.9.3"
 "pipx:mkdocs" = { version = "1.6.1", extras = "i18n", uvx_args = "--with-requirements requirements.txt" }
 editorconfig-checker = "3.3.0"
 "npm:wrangler" = "4.16.1"
+"pipx:pymarkdownlnt" = "latest"
 
-[tasks."style:lint"]
+
+[tasks.lint]
 description = "Linting"
 run = """
 mise exec yamllint -- yamllint .
@@ -23,16 +25,19 @@ mise exec taplo -- taplo lint pyproject.toml
 mise exec typos -- typos .
 """
 
-[tasks."style:format"]
+
+[tasks.format]
 description = "Run the formatters"
 run = """
 mise exec yamlfmt -- yamlfmt .
 mise exec taplo -- taplo format .
 """
-[tasks."style:ci"]
+
+[tasks.ci]
 description = "CI tasks"
-depends = ["style:lint", "style:format"]
+depends = ["lint", "format"]
 run = "echo 'All style checks passed!'"
+
 
 [tasks."docs:serve"]
 description = "Serving Docs"
