@@ -29,7 +29,8 @@ Self-Taught Software Developer with expertise in Web Scraping, Web Development, 
 
 ## Stats
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=hasansezertasan&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&theme=synthwave)
+![GitHub Stats](./profile/stats.svg)
+![Top Languages](./profile/top-langs.svg)
 
 <!-- Links -->
 
