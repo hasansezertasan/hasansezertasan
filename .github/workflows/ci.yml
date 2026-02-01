@@ -12,11 +12,11 @@ jobs:
       # Step 1: Check out the repository
       # Description: Checks out the repository so that the workflow can access its contents.
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       # Step 2: Install mise using the specified action
       # Description: Installs mise, along with the tools defined in the mise.toml file.
       - name: Install mise
-        uses: jdx/mise-action@v2
+        uses: jdx/mise-action@v3
       # Step 3: Run Checks
       # Description: Runs the style:ci command to check the code style and ensure it adheres to the defined standards.
       - name: Run Checks
