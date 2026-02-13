@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Hasan Sezer Ta&#351;an's GitHub Stats, Rank: A</title>
-        <desc id="descId">Total Stars Earned: 147, Total Commits  (last year) : 510, Total PRs: 374, Total PRs Merged: 324, Merged PRs Percentage: 86.63, Total PRs Reviewed: 28, Total Issues: 178, Total Discussions Started: 41, Total Discussions Answered: 17, Contributed to (last year): 34</desc>
+        <desc id="descId">Total Stars Earned: 147, Total Commits  (last year) : 507, Total PRs: 377, Total PRs Merged: 324, Merged PRs Percentage: 85.94, Total PRs Reviewed: 28, Total Issues: 174, Total Discussions Started: 41, Total Discussions Answered: 17, Contributed to (last year): 34</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 33.28631208854532;
+        stroke-dashoffset: 33.37470957665809;
       }
     }
   
@@ -177,7 +177,7 @@
         x="219.01"
         y="12.5"
         data-testid="commits"
-      >510</text>
+      >507</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -192,7 +192,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >374</text>
+      >377</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -222,7 +222,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs_merged_percentage"
-      >86.63 %</text>
+      >85.94 %</text>
     </g>
   </g><g transform="translate(0, 125)">
     <g class="stagger" style="animation-delay: 1200ms" transform="translate(25, 0)">
@@ -252,7 +252,7 @@
         x="219.01"
         y="12.5"
         data-testid="issues"
-      >178</text>
+      >174</text>
     </g>
   </g><g transform="translate(0, 175)">
     <g class="stagger" style="animation-delay: 1500ms" transform="translate(25, 0)">
