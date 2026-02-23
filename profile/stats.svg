@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Hasan Sezer Ta&#351;an's GitHub Stats, Rank: A</title>
-        <desc id="descId">Total Stars Earned: 148, Total Commits  (last year) : 520, Total PRs: 377, Total PRs Merged: 324, Merged PRs Percentage: 85.94, Total PRs Reviewed: 29, Total Issues: 174, Total Discussions Started: 41, Total Discussions Answered: 17, Contributed to (last year): 34</desc>
+        <desc id="descId">Total Stars Earned: 148, Total Commits  (last year) : 527, Total PRs: 384, Total PRs Merged: 328, Merged PRs Percentage: 85.42, Total PRs Reviewed: 29, Total Issues: 175, Total Discussions Started: 41, Total Discussions Answered: 17, Contributed to (last year): 35</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 32.8949025085657;
+        stroke-dashoffset: 32.668655865945404;
       }
     }
   
@@ -177,7 +177,7 @@
         x="219.01"
         y="12.5"
         data-testid="commits"
-      >520</text>
+      >527</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -192,7 +192,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >377</text>
+      >384</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -207,7 +207,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs_merged"
-      >324</text>
+      >328</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
@@ -222,7 +222,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs_merged_percentage"
-      >85.94 %</text>
+      >85.42 %</text>
     </g>
   </g><g transform="translate(0, 125)">
     <g class="stagger" style="animation-delay: 1200ms" transform="translate(25, 0)">
@@ -252,7 +252,7 @@
         x="219.01"
         y="12.5"
         data-testid="issues"
-      >174</text>
+      >175</text>
     </g>
   </g><g transform="translate(0, 175)">
     <g class="stagger" style="animation-delay: 1500ms" transform="translate(25, 0)">
@@ -297,7 +297,7 @@
         x="219.01"
         y="12.5"
         data-testid="contribs"
-      >34</text>
+      >35</text>
     </g>
   </g>
     </svg>
