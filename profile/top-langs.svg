@@ -130,7 +130,7 @@
           data-testid="lang-progress"
           x="0"
           y="0"
-          width="218.72"
+          width="218.74"
           height="8"
           fill="#3572A5"
         />
@@ -138,9 +138,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="218.72"
+          x="218.74"
           y="0"
-          width="26.62"
+          width="26.6"
           height="8"
           fill="#a52a22"
         />
@@ -180,7 +180,7 @@
           data-testid="lang-progress"
           x="249.22000000000003"
           y="0"
-          width="10.43"
+          width="10.42"
           height="8"
           fill="#6b9543"
         />
@@ -188,7 +188,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="249.65000000000003"
+          x="249.64000000000001"
           y="0"
           width="10.18"
           height="8"
@@ -198,7 +198,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="249.83000000000004"
+          x="249.82000000000002"
           y="0"
           width="10.17"
           height="8"
@@ -211,14 +211,14 @@
     <g class="stagger" style="animation-delay: 450ms">
       <circle cx="5" cy="6" r="5" fill="#3572A5" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Python 87.49%
+        Python 87.50%
       </text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms">
       <circle cx="5" cy="6" r="5" fill="#a52a22" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Jinja 10.65%
+        Jinja 10.64%
       </text>
     </g>
   </g><g transform="translate(0, 50)">
