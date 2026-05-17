@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Hasan Sezer Ta&#351;an's GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 149, Total Commits  (last year) : 648, Total PRs: 444, Total PRs Merged: 380, Merged PRs Percentage: 85.59, Total PRs Reviewed: 39, Total Issues: 203, Total Discussions Started: 40, Total Discussions Answered: 17, Contributed to (last year): 41</desc>
+        <desc id="descId">Total Stars Earned: 149, Total Commits  (last year) : 678, Total PRs: 459, Total PRs Merged: 396, Merged PRs Percentage: 86.27, Total PRs Reviewed: 39, Total Issues: 203, Total Discussions Started: 40, Total Discussions Answered: 17, Contributed to (last year): 41</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 29.36876810915532;
+        stroke-dashoffset: 28.782817244215238;
       }
     }
   
@@ -177,7 +177,7 @@
         x="219.01"
         y="12.5"
         data-testid="commits"
-      >648</text>
+      >678</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -192,7 +192,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >444</text>
+      >459</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -207,7 +207,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs_merged"
-      >380</text>
+      >396</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
@@ -222,7 +222,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs_merged_percentage"
-      >85.59 %</text>
+      >86.27 %</text>
     </g>
   </g><g transform="translate(0, 125)">
     <g class="stagger" style="animation-delay: 1200ms" transform="translate(25, 0)">
