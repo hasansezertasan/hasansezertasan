@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Hasan Sezer Ta&#351;an's GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 153, Total Commits  (last year) : 684, Total PRs: 467, Total PRs Merged: 403, Merged PRs Percentage: 86.30, Total PRs Reviewed: 39, Total Issues: 204, Total Discussions Started: 40, Total Discussions Answered: 17, Contributed to (last year): 40</desc>
+        <desc id="descId">Total Stars Earned: 154, Total Commits  (last year) : 689, Total PRs: 467, Total PRs Merged: 403, Merged PRs Percentage: 86.30, Total PRs Reviewed: 39, Total Issues: 204, Total Discussions Started: 40, Total Discussions Answered: 17, Contributed to (last year): 40</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 28.218050392243576;
+        stroke-dashoffset: 28.030340819255912;
       }
     }
   
@@ -159,10 +159,10 @@
       <text class="stat  bold" x="25" y="12.5">Total Stars Earned:</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="stars"
-      >153</text>
+      >154</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
@@ -174,10 +174,10 @@
       <text class="stat  bold" x="25" y="12.5">Total Commits (last year):</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="commits"
-      >684</text>
+      >689</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -189,7 +189,7 @@
       <text class="stat  bold" x="25" y="12.5">Total PRs:</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="prs"
       >467</text>
@@ -204,7 +204,7 @@
       <text class="stat  bold" x="25" y="12.5">Total PRs Merged:</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="prs_merged"
       >403</text>
@@ -219,7 +219,7 @@
       <text class="stat  bold" x="25" y="12.5">Merged PRs Percentage:</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="prs_merged_percentage"
       >86.30 %</text>
@@ -234,7 +234,7 @@
       <text class="stat  bold" x="25" y="12.5">Total PRs Reviewed:</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="reviews"
       >39</text>
@@ -249,7 +249,7 @@
       <text class="stat  bold" x="25" y="12.5">Total Issues:</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="issues"
       >204</text>
@@ -264,7 +264,7 @@
       <text class="stat  bold" x="25" y="12.5">Total Discussions Started:</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="discussions_started"
       >40</text>
@@ -279,7 +279,7 @@
       <text class="stat  bold" x="25" y="12.5">Total Discussions Answered:</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="discussions_answered"
       >17</text>
@@ -294,7 +294,7 @@
       <text class="stat  bold" x="25" y="12.5">Contributed to (last year):</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="contribs"
       >40</text>
