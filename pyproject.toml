@@ -6,3 +6,7 @@ requires-python = ">=3.14"
 dependencies = [
     "mkdocs-material>=9.7.6",
 ]
+
+[tool.typos.default.extend-words]
+# "Paket Mutfak" is a company name (Turkish for "Package Kitchen"), not a typo of "Packet".
+Paket = "Paket"
