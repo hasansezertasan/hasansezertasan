@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "fileId": "uUqJWj4y",
+      "path": ".bookmarks/local/bookmarks.json",
+      "watch": true,
+      "enabled": true
+    }
+  ],
+  "nameIndex": {
+    "Unsorted": {
+      "fileId": "uUqJWj4y",
+      "groupId": "--xmMoc-"
+    }
+  },
+  "loadedWorkspaceFolders": [
+    "/Users/hasansezertasan/.superset/worktrees/hasansezertasan/feat/blush-dessert"
+  ],
+  "settings": {
+    "watchersEnabled": true,
+    "sortByFile": true,
+    "sortByGroup": false,
+    "general": {
+      "showInlineDots": false,
+      "showNotesAndLabels": true
+    },
+    "appearance": {
+      "showDifferentColors": true,
+      "showDifferentStyles": true
+    },
+    "paths": {}
+  }
+}
