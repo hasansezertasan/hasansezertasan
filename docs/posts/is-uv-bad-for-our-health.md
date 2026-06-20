@@ -15,4 +15,4 @@ slug: is-uv-bad-for-our-health
 
 # Is `uv` Bad for Our Health?
 
-TL;DR: Not in [astral](http://astral.sh) dimension!
+TL;DR: Not in the [astral](http://astral.sh) dimension!
