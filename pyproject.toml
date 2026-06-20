@@ -3,10 +3,18 @@ name = "hasansezertasan"
 version = "0.1.0"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = [
-    "mkdocs-material>=9.7.6",
-]
+dependencies = ["mkdocs-material==9.7.6"]
 
 [tool.typos.default.extend-words]
 # "Paket Mutfak" is a company name (Turkish for "Package Kitchen"), not a typo of "Packet".
 Paket = "Paket"
+
+[tool.pymarkdown]
+# Align pymarkdown with the existing `.markdownlint.json` settings so the three
+# markdown linters agree. See https://pymarkdown.readthedocs.io/en/latest/
+[tool.pymarkdown.plugins.md013]
+# Disabled to match `.markdownlint.json` ("line-length": false).
+enabled = false
+[tool.pymarkdown.plugins.md026]
+# Allow trailing punctuation in headings (e.g. "Hi there 👋").
+enabled = false

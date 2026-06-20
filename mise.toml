@@ -1,42 +1,15 @@
 [tools]
 action-validator = "latest"
-actionlint = "latest"
 editorconfig-checker = "latest"
 markdownlint-cli2 = "latest"
-pre-commit = "latest"
+prek = "latest"
 taplo = "latest"
-typos = "latest"
 uv = "latest"
-yamlfmt = "latest"
-yamllint = "latest"
-
-[tasks."style:lint"]
-description = "Linting"
-run = """
-mise exec yamllint -- yamllint .
-mise exec actionlint -- actionlint
-mise exec action-validator -- action-validator
-mise exec markdownlint-cli2 -- markdownlint-cli2 .
-mise exec taplo -- taplo lint pyproject.toml
-mise exec typos -- typos .
-"""
-
-[tasks."style:format"]
-description = "Run the formatters"
-run = """
-mise exec yamlfmt -- yamlfmt .
-mise exec taplo -- taplo format .
-"""
-[tasks."style:ci"]
-description = "CI tasks"
-run = [{ task = "style:lint" }, { task = "style:format" }]
 
 [tasks."docs:serve"]
 description = "Serving Docs"
 run = "uv run mkdocs serve"
 
-
 [tasks."docs:build"]
 description = "Building Docs"
-depends = ["style:ci"]
 run = "uv run mkdocs build --clean"
