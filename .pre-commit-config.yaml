@@ -60,7 +60,7 @@ repos:
     rev: 0.13.0
     hooks:
       - id: proselint
-        exclude: LICENSE|requirements
+        exclude: '^(LICENSE|requirements\.txt)$'
         files: \.(md|mdown|markdown)$
 #   - repo: https://github.com/jackdewinter/pymarkdown
 #     rev: 0.9.16
