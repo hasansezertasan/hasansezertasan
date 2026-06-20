@@ -18,9 +18,9 @@ There are great advancements in the Python tooling lately. `ruff` shined with it
 
 I used to use Jupyter Notebooks (in VSCode) for almost everything. I used it like a REPL when I was writing Selenium Automation Scripts (I stopped it when I switched to Playwright). I used it for debugging too (don't give me that look). I used it whenever I wanted to experiment with code or try a new package. It was my playground.
 
-Then I stopped when I switched to web development, but not without running Flask server in a Notebook (what a joke!).
+Then I stopped when I switched to web development, but not without running a Flask server in a Notebook (what a joke!).
 
-I didn't actively use Notebooks for over two years now and I discovered a new tool that is very similar to Jupyter Notebooks but with a lot of features and great flexibility.
+I haven't actively used Notebooks for over two years now, and I discovered a new tool that is very similar to Jupyter Notebooks but with a lot of features and great flexibility.
 
 It's git-friendly (diffable), easy to use, and has a lot of features.
 

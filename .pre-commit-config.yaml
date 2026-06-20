@@ -58,7 +58,7 @@ repos:
       - id: yamlfmt
         name: YAML Formatter
   - repo: https://github.com/amperser/proselint/
-    rev: 0.10.2
+    rev: 0.13.0
     hooks:
       - id: proselint
         exclude: LICENSE|requirements

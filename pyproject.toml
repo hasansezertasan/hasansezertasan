@@ -8,7 +8,7 @@ authors = [{ name = "Hasan Sezer Taşan", email = "hasansezertasan@gmail.com" }]
 maintainers = [
   { name = "Hasan Sezer Taşan", email = "hasansezertasan@gmail.com" },
 ]
-requires-python = ">=3.6" # Even though I started with 2.7...
+requires-python = ">=3.8,<4.0" # Even though I started with 2.7...
 dependencies = []
 
 

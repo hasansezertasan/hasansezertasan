@@ -46,5 +46,5 @@ run = "mise exec pipx:mkdocs -- mkdocs serve"
 
 [tasks."docs:build"]
 description = "Building Docs"
-depends = ["style:lint", "style:format"]
+depends = ["lint", "format"]
 run = "mise exec pipx:mkdocs -- mkdocs build --clean"
