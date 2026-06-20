@@ -15,6 +15,18 @@ editorconfig-checker = "3.3.0"
 
 
 [tasks.lint]
+action-validator = "latest"
+actionlint = "latest"
+editorconfig-checker = "latest"
+markdownlint-cli2 = "latest"
+pre-commit = "latest"
+taplo = "latest"
+typos = "latest"
+uv = "latest"
+yamlfmt = "latest"
+yamllint = "latest"
+
+[tasks."style:lint"]
 description = "Linting"
 run = """
 mise exec yamllint -- yamllint .
@@ -27,6 +39,7 @@ mise exec typos -- typos .
 
 
 [tasks.format]
+[tasks."style:format"]
 description = "Run the formatters"
 run = """
 mise exec yamlfmt -- yamlfmt .
@@ -42,9 +55,18 @@ run = "echo 'All style checks passed!'"
 [tasks."docs:serve"]
 description = "Serving Docs"
 run = "mise exec pipx:mkdocs -- mkdocs serve"
+[tasks."style:ci"]
+description = "CI tasks"
+run = [{ task = "style:lint" }, { task = "style:format" }]
+
+[tasks."docs:serve"]
+description = "Serving Docs"
+run = "uv run mkdocs serve"
 
 
 [tasks."docs:build"]
 description = "Building Docs"
 depends = ["lint", "format"]
 run = "mise exec pipx:mkdocs -- mkdocs build --clean"
+depends = ["style:ci"]
+run = "uv run mkdocs build --clean"

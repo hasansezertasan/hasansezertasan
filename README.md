@@ -1,42 +1,23 @@
-# Hi there! :wave:
+# Hey, I'm Sezer :wave:
 
-<!-- markdownlint-disable MD033 -->
-<a href="https://www.twitter.com/hasansezertasan" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/twitter/follow/hasansezertasan?logo=twitter&style=for-the-badge&color=0891b2&labelColor=1c1917" alt="Twitter Follow"/>
-</a>
-<a href="https://www.linkedin.com/in/hasansezertasan" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/badge/-hasansezertasan-blue?style=for-the-badge&logo=Linkedin&logoColor=white&color=0891b2&labelColor=1c1917" alt="LinkedIn"/>
-</a>
-<a href="https://www.instagram.com/hasansezertasan" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/badge/-hasansezertasan-blue?style=for-the-badge&logo=Instagram&logoColor=white&color=0891b2&labelColor=1c1917" alt="Instagram"/>
-</a>
-<a href="https://www.github.com/hasansezertasan" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/github/followers/hasansezertasan?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" alt="GitHub Followers"/>
-</a>
-<!-- markdownlint-enable MD033 -->
+> I build things for humans, developers, and agents.
 
----
+By day: backend engineer at **Paket Mutfak**, a ghost-kitchen company running on Python and good timing.
 
-👨‍💻 Self-taught Software Developer passionate about 🚀 Web Scraping, 🌐 Web Development, and 🛠️ Backend Engineering. 🕵️‍♂️ Skilled in reverse-engineering private APIs. ⚡ Proficient at rapidly building scalable web applications using modern frameworks like [FastAPI], [Litestar], [Flask], [Django], and [HTMX]. 🤝 Active open-source contributor focused on delivering efficient and maintainable solutions! ✨
+By night: shipping OSS — SDKs, framework contributions, and automations that save somebody, somewhere, a few hours.
 
-## Languages and Frameworks
+Reach me at [hasansezertasan@gmail.com](mailto:hasansezertasan@gmail.com?subject=%5BGitHub%5D). I'm also on [LinkedIn](https://www.linkedin.com/in/hasansezertasan) and [Twitter](https://www.twitter.com/hasansezertasan) if that's your thing.
 
-[![Languages](https://skillicons.dev/icons?i=python,bash,javascript,html,css,md,nodejs,selenium,fastapi,flask,django,htmx,alpinejs,bootstrap&perline=6)][skillicons]
+## Tech Stack
 
-## Tools & Platforms
-
-[![Tools & Platforms](https://skillicons.dev/icons?i=vscode,figma,ubuntu,docker,kubernetes,gcp,cloudflare,netlify,mongodb,redis,sqlite,mysql,postgres,postman,bots,git,github,githubactions&perline=6)][skillicons]
+[![Tech Stack](https://skillicons.dev/icons?i=python,fastapi,flask,django,htmx,postgres,redis,docker,git,gcp,bash,md&perline=6)][skillicons]
 
 ## Stats
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=hasansezertasan&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&theme=synthwave)
+![GitHub Stats](./profile/stats.svg)
+![Top Languages](./profile/top-langs.svg)
 
 <!-- Links -->
 
 <!-- [fastapi-turkiye]: http://hasansezertasan.github.io/fastapi-turkiye -->
 [skillicons]: https://skillicons.dev
-[Flask]: https://github.com/pallets/flask
-[FastAPI]: https://github.com/fastapi/fastapi
-[Litestar]: https://github.com/litestar-org/litestar
-[Django]: https://github.com/django/django
-[HTMX]: https://github.com/bigskysoftware/htmx
