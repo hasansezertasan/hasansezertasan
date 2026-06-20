@@ -1,0 +1,104 @@
+#:schema: https://www.schemastore.org/prek.json
+# Configuration file for `prek`, a git hook framework written in Rust.
+# See https://prek.j178.dev for more information.
+[[repos]]
+repo = "builtin"
+hooks = [
+  { id = "check-added-large-files" },
+  { id = "check-case-conflict" },
+  { id = "check-executables-have-shebangs" },
+  { id = "check-json" },
+  { id = "check-json5" },
+  { id = "check-merge-conflict" },
+  { id = "check-symlinks" },
+  { id = "check-toml" },
+  { id = "check-xml" },
+  { id = "check-yaml" },
+  { id = "detect-private-key" },
+  { id = "end-of-file-fixer" },
+  { id = "fix-byte-order-marker" },
+  { id = "mixed-line-ending" },
+  { id = "no-commit-to-branch" },
+  { id = "trailing-whitespace" },
+]
+[[repos]]
+repo = "https://github.com/python-jsonschema/check-jsonschema"
+rev = "0.37.3"
+hooks = [
+  { id = "check-dependabot" },
+  { id = "check-github-actions" },
+  { id = "check-github-issue-forms" },
+  { id = "check-github-workflows" },
+  { id = "check-renovate" },
+]
+[[repos]]
+repo = "https://github.com/crate-ci/typos"
+rev = "v1.47.2"
+hooks = [
+  { id = "typos" }
+]
+[[repos]]
+repo = "https://github.com/rhysd/actionlint"
+rev = "v1.7.12"
+hooks = [
+  { id = "actionlint" }
+]
+[[repos]]
+repo = "https://github.com/mpalmer/action-validator"
+rev = "v0.9.0"
+hooks = [
+  { id = "action-validator" }
+]
+[[repos]]
+repo = "https://github.com/adrienverge/yamllint"
+rev = "v1.38.0"
+hooks = [
+  { id = "yamllint" }
+]
+[[repos]]
+repo = "https://github.com/google/yamlfmt"
+rev = "v0.21.0"
+hooks = [
+  { id = "yamlfmt" }
+]
+# [[repos]]
+# repo = "https://github.com/ComPWA/taplo-pre-commit"
+# rev = "v0.9.3"
+# hooks = [{ id = "taplo-lint" }, { id = "taplo-format" }]
+[[repos]]
+repo = "https://github.com/igorshubovych/markdownlint-cli"
+rev = "v0.49.0"
+hooks = [
+  { id = "markdownlint" }
+]
+[[repos]]
+repo = "https://github.com/DavidAnson/markdownlint-cli2"
+rev = "v0.22.1"
+hooks = [
+  { id = "markdownlint-cli2" }
+]
+[[repos]]
+repo = "https://github.com/amperser/proselint"
+rev = "v0.16.0"
+hooks = [
+  {
+    id = "proselint",
+    args = ["check"],
+    exclude = '^(LICENSE|requirements\.txt)$',
+    files = '\.(md|mdown|markdown)$'
+  }
+]
+[[repos]]
+repo = "https://github.com/jackdewinter/pymarkdown"
+rev = "v0.9.38"
+hooks = [
+  {
+    id = "pymarkdown",
+    pass_filenames = false,
+    args = ["--config=pyproject.toml", "scan", ".", "./docs"]
+  }
+]
+[[repos]]
+repo = "https://github.com/astral-sh/uv-pre-commit"
+rev = "0.11.20"
+hooks = [{ id = "uv-lock" }]

@@ -1,0 +1,6 @@
+{
+  "checks": {
+    "typography.punctuation.exclamation": false,
+    "redundancy.misc.after_the_deadline": false
+  }
+}
