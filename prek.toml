@@ -15,11 +15,13 @@ hooks = [
   { id = "check-xml" },
   { id = "check-yaml" },
   { id = "detect-private-key" },
-  { id = "end-of-file-fixer" },
+  # Exclude bot-generated README cards; they're regenerated nightly by
+  # `.github/workflows/readme-stats.yml` and committed without running prek.
+  { id = "end-of-file-fixer", exclude = '^profile/.*\.svg$' },
   { id = "fix-byte-order-marker" },
   { id = "mixed-line-ending" },
   { id = "no-commit-to-branch" },
-  { id = "trailing-whitespace" },
+  { id = "trailing-whitespace", exclude = '^profile/.*\.svg$' },
 ]
 [[repos]]
 repo = "https://github.com/python-jsonschema/check-jsonschema"
