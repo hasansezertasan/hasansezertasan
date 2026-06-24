@@ -53,13 +53,13 @@ hooks = [
 repo = "https://github.com/adrienverge/yamllint"
 rev = "v1.38.0"
 hooks = [
-  { id = "yamllint" }
+  { id = "yamllint", args = ["-c", ".config/yamllint.yaml"] }
 ]
 [[repos]]
 repo = "https://github.com/google/yamlfmt"
 rev = "v0.21.0"
 hooks = [
-  { id = "yamlfmt" }
+  { id = "yamlfmt", args = ["-conf", ".config/yamlfmt.yml"] }
 ]
 # [[repos]]
 # repo = "https://github.com/ComPWA/taplo-pre-commit"
@@ -69,7 +69,7 @@ hooks = [
 repo = "https://github.com/igorshubovych/markdownlint-cli"
 rev = "v0.49.0"
 hooks = [
-  { id = "markdownlint" }
+  { id = "markdownlint", args = ["--config", ".config/markdownlint.json"] }
 ]
 [[repos]]
 repo = "https://github.com/DavidAnson/markdownlint-cli2"
