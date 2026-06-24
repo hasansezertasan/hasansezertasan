@@ -23,7 +23,7 @@ Early on I had a question in the back of my head: *how far can I actually get wi
 
 I stopped watching tutorials as often a few years ago, but back when I did, one detail in some of them always caught my eye: a small, semi-transparent black window on screen showing the presenter's keystrokes. You could see exactly what they pressed, usually which shortcut, and finally connect the "wait, how did they do that?" moment to an actual key combo.
 
-When I looked into it, I found tools like keycastr, keyviz, and keystro.
+When I looked into it, I found tools like KeyCastr, Keyviz, and Keystroke Pro.
 
 Naturally, I asked myself: *could I build this in Python?* That was three or four years ago, and I answered it back then. I read up, compared the libraries, and the conclusion was clear. Yes, I could. So I... didn't. I'd learned what I wanted to learn and the curiosity was satisfied. The thing itself was never the point.
 
