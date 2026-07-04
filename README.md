@@ -1,6 +1,6 @@
 # Hey, I'm Sezer :wave:
 
-<sub>*seh-ZEHR* · IPA /seˈzeɾ/ · [🔊 hear it](https://forvo.com/word/sezer/#tr)</sub>
+*seh-ZEHR* · IPA /seˈzeɾ/ · [🔊 hear it](https://forvo.com/word/sezer/#tr)
 
 > I build things for humans, developers, and agents.
 
