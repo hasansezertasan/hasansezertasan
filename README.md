@@ -1,5 +1,7 @@
 # Hey, I'm Sezer :wave:
 
+*seh-ZEHR* · IPA /seˈzeɾ/ · [🔊 hear it](https://forvo.com/word/sezer/#tr)
+
 > I build things for humans, developers, and agents.
 
 By day: backend engineer at **Paket Mutfak**, a ghost-kitchen company running on Python and good timing.
