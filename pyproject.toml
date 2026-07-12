@@ -8,6 +8,8 @@ dependencies = ["mkdocs-material==9.7.6"]
 [tool.typos.default.extend-words]
 # "Paket Mutfak" is a company name (Turkish for "Package Kitchen"), not a typo of "Packet".
 Paket = "Paket"
+# "seh" is a phonetic syllable in the pronunciation guide "seh-ZEHR" (Sezer), not a typo of "she".
+seh = "seh"
 
 [tool.pymarkdown]
 # Align pymarkdown with the existing `.markdownlint.json` settings so the three
