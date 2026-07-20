@@ -69,7 +69,7 @@ hooks = [
 # hooks = [{ id = "taplo-lint" }, { id = "taplo-format" }]
 [[repos]]
 repo = "https://github.com/igorshubovych/markdownlint-cli"
-rev = "v0.49.0"
+rev = "v0.49.1"
 hooks = [
   { id = "markdownlint", args = ["--config", ".config/markdownlint.json"] }
 ]
