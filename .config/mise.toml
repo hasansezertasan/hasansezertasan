@@ -2,9 +2,14 @@
 action-validator = "latest"
 editorconfig-checker = "latest"
 markdownlint-cli2 = "latest"
+mask = "latest"
 prek = "latest"
 taplo = "latest"
 uv = "latest"
+marp-cli = "4.5.0"
+github-markdown-toc = "0.10.0"
+"ubi:maaslalani/slides" = "latest"
+"aqua:maaslalani/slides" = "latest"
 
 [tasks."docs:serve"]
 description = "Serving Docs"
@@ -13,3 +18,41 @@ run = "uv run mkdocs serve"
 [tasks."docs:build"]
 description = "Building Docs"
 run = "uv run mkdocs build --clean"
+
+[tasks.prek]
+description = "Run prek hooks"
+run = "prek -a"
+
+[tasks.clean]
+description = "Clean the pests"
+run = '''
+rm -rf build/
+rm -rf dist/
+rm -rf *.egg-info
+find . -type d -name "__pycache__" -exec rm -rf {} +
+find . -type d -name ".mypy_cache" -exec rm -rf {} +
+find . -type d -name ".pytest_cache" -exec rm -rf {} +
+find . -type d -name ".ruff_cache" -exec rm -rf {} +
+find . -type f -name "*.py[cod]" -delete
+find . -type f -name ".coverage" -delete
+'''
+
+[tasks.serve]
+description = "Serve the Slidedeck using Marp"
+usage = 'arg "<deck>" help="Path to the deck to serve" default="slides/toolception.md"'
+run = "marp ${usage_deck} -p"
+
+[tasks.build-pdf]
+description = "Build the Slidedeck as a PDF"
+usage = 'arg "<deck>" help="Path to the deck to build" default="slides/toolception.md"'
+run = "marp ${usage_deck} --pdf"
+
+[tasks.build-html]
+description = "Build the Slidedeck as a HTML"
+usage = 'arg "<deck>" help="Path to the deck to build" default="slides/toolception.md"'
+run = "marp ${usage_deck} --html"
+
+[tasks.build-pptx]
+description = "Build the Slidedeck as a PPTX"
+usage = 'arg "<deck>" help="Path to the deck to build" default="slides/toolception.md"'
+run = "marp ${usage_deck} --pptx"

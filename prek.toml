@@ -63,10 +63,10 @@ rev = "v0.21.0"
 hooks = [
   { id = "yamlfmt", args = ["-conf", ".config/yamlfmt.yml"] }
 ]
-# [[repos]]
-# repo = "https://github.com/ComPWA/taplo-pre-commit"
-# rev = "v0.9.3"
-# hooks = [{ id = "taplo-lint" }, { id = "taplo-format" }]
+[[repos]]
+repo = "https://github.com/ComPWA/taplo-pre-commit"
+rev = "v0.9.3"
+hooks = [{ id = "taplo-lint" }, { id = "taplo-format" }]
 [[repos]]
 repo = "https://github.com/igorshubovych/markdownlint-cli"
 rev = "v0.49.1"
