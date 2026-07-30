@@ -7,7 +7,7 @@ footer: "Slides by [@hasansezertasan]"
 paginate: true
 _paginate: false
 ---
-<!-- markdownlint-disable MD035 -->
+<!-- markdownlint-disable MD024 MD033 MD035 -->
 <!-- headingDivider: 3 -->
 
 # Toolception <!-- fit -->
@@ -151,11 +151,11 @@ It replaces: `asdf`, `nvm`, `pyenv`, `goenv`, `rbenv`, `rustup`, and more.
 
 It is aware of many standard files: `.python-version`, `.tool-versions`, and more.
 
-It is very performant and fast. It is written in Rust. It Installs tools in parallel.
+Very performant and fast, written in Rust, and it installs tools in parallel.
 
 Interactive UI for installing tools. (`mise use` and hit enter)
 
-There is a very well structured VSCode extension for `mise`.
+There is a very well-structured VS Code extension for `mise`.
 
 ## How do I use mise as a package manager?
 

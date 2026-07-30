@@ -8,7 +8,6 @@ taplo = "latest"
 uv = "latest"
 marp-cli = "4.5.0"
 github-markdown-toc = "0.10.0"
-"ubi:maaslalani/slides" = "latest"
 "aqua:maaslalani/slides" = "latest"
 
 [tasks."docs:serve"]
@@ -28,7 +27,7 @@ description = "Clean the pests"
 run = '''
 rm -rf build/
 rm -rf dist/
-rm -rf *.egg-info
+find . -type d -name "*.egg-info" -exec rm -rf {} +
 find . -type d -name "__pycache__" -exec rm -rf {} +
 find . -type d -name ".mypy_cache" -exec rm -rf {} +
 find . -type d -name ".pytest_cache" -exec rm -rf {} +
@@ -39,20 +38,10 @@ find . -type f -name ".coverage" -delete
 
 [tasks.serve]
 description = "Serve the Slidedeck using Marp"
-usage = 'arg "<deck>" help="Path to the deck to serve" default="slides/toolception.md"'
-run = "marp ${usage_deck} -p"
-
-[tasks.build-pdf]
-description = "Build the Slidedeck as a PDF"
-usage = 'arg "<deck>" help="Path to the deck to build" default="slides/toolception.md"'
-run = "marp ${usage_deck} --pdf"
+usage = 'arg "<deck>" help="Path to the deck to serve" default="docs/slides/toolception.md"'
+run = "marp \"${usage_deck}\" -p"
 
 [tasks.build-html]
-description = "Build the Slidedeck as a HTML"
-usage = 'arg "<deck>" help="Path to the deck to build" default="slides/toolception.md"'
-run = "marp ${usage_deck} --html"
-
-[tasks.build-pptx]
-description = "Build the Slidedeck as a PPTX"
-usage = 'arg "<deck>" help="Path to the deck to build" default="slides/toolception.md"'
-run = "marp ${usage_deck} --pptx"
+description = "Build the Slidedeck as an HTML"
+usage = 'arg "<deck>" help="Path to the deck to build" default="docs/slides/toolception.md"'
+run = "marp \"${usage_deck}\" --html"
