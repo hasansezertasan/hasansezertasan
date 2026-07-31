@@ -56,7 +56,12 @@ hooks = [{ id = "yamlfmt", args = ["-conf", ".config/yamlfmt.yml"] }]
 [[repos]]
 repo = "https://github.com/ComPWA/taplo-pre-commit"
 rev = "v0.9.3"
-hooks = [{ id = "taplo-lint" }, { id = "taplo-format" }]
+hooks = [
+  # taplo v0.9.3 can't parse the current schemastore catalog, so skip schema
+  # validation; taplo-format still confirms the TOML is well-formed.
+  { id = "taplo-lint", args = ["--no-schema"] },
+  { id = "taplo-format" },
+]
 [[repos]]
 repo = "https://github.com/igorshubovych/markdownlint-cli"
 rev = "v0.49.1"
