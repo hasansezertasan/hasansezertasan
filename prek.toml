@@ -27,7 +27,6 @@ hooks = [
 repo = "https://github.com/python-jsonschema/check-jsonschema"
 rev = "0.37.4"
 hooks = [
-  { id = "check-dependabot" },
   { id = "check-github-actions" },
   { id = "check-github-issue-forms" },
   { id = "check-github-workflows" },
@@ -63,24 +62,22 @@ hooks = [
   { id = "taplo-format" },
 ]
 [[repos]]
-repo = "https://github.com/igorshubovych/markdownlint-cli"
-rev = "v0.49.1"
-hooks = [
-  { id = "markdownlint", args = [
-    "--config",
-    ".config/markdownlint.json",
-  ] },
-]
-[[repos]]
 repo = "https://github.com/DavidAnson/markdownlint-cli2"
 rev = "v0.23.2"
-hooks = [{ id = "markdownlint-cli2" }]
+hooks = [
+  { id = "markdownlint-cli2", args = [
+    "--config",
+    ".config/markdownlint-cli2.jsonc",
+  ] },
+]
 [[repos]]
 repo = "https://github.com/amperser/proselint"
 rev = "v0.16.0"
 hooks = [
   { id = "proselint", args = [
     "check",
+    "--config",
+    ".config/proselintrc.json",
   ], exclude = '^(LICENSE|requirements\.txt|docs/slides/.*)$', files = '\.(md|mdown|markdown)$' },
 ]
 [[repos]]
