@@ -12,10 +12,10 @@ Paket = "Paket"
 seh = "seh"
 
 [tool.pymarkdown]
-# Align pymarkdown with the existing `.markdownlint.json` settings so the three
+# Align pymarkdown with the `.config/markdownlint-cli2.jsonc` settings so both
 # markdown linters agree. See https://pymarkdown.readthedocs.io/en/latest/
 [tool.pymarkdown.plugins.md013]
-# Disabled to match `.markdownlint.json` ("line-length": false).
+# Disabled to match `.config/markdownlint-cli2.jsonc` ("MD013": false).
 enabled = false
 [tool.pymarkdown.plugins.md026]
 # Allow trailing punctuation in headings (e.g. "Hi there 👋").
