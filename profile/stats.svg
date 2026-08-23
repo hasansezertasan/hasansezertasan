@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Hasan Sezer Ta&#351;an&#39;s GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 194, Total Commits  (last year) : 1867, Total PRs: 1017, Total PRs Merged: 875, Merged PRs Percentage: 86.04, Total PRs Reviewed: 824, Total Issues: 353, Total Discussions Started: 40, Total Discussions Answered: 17, Contributed to (last year): 39</desc>
+        <desc id="descId">Total Stars Earned: 194, Total Commits  (last year) : 1867, Total PRs: 1017, Total PRs Merged: 875, Merged PRs Percentage: 86.04, Total PRs Reviewed: 824, Total Issues: 353, Total Discussions Started: 40, Total Discussions Answered: 17, Contributed to (last year): 38</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 18.501528659284478;
+        stroke-dashoffset: 18.49016553038887;
       }
     }
   
@@ -297,7 +297,7 @@
         x="224.01"
         y="12.5"
         data-testid="contribs"
-      >39</text>
+      >38</text>
     </g>
   </g>
     </svg>
