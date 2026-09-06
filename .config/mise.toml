@@ -4,7 +4,7 @@ editorconfig-checker = "latest"
 markdownlint-cli2 = "latest"
 prek = "latest"
 uv = "latest"
-marp-cli = "4.5.0"
+marp-cli = "4.5.1"
 github-markdown-toc = "0.10.0"
 "aqua:maaslalani/slides" = "latest"
 
