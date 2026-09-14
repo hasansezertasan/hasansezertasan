@@ -82,7 +82,7 @@ hooks = [
 ]
 [[repos]]
 repo = "https://github.com/jackdewinter/pymarkdown"
-rev = "v0.9.39"
+rev = "v0.9.40"
 hooks = [
   { id = "pymarkdown", pass_filenames = false, args = [
     "--config=pyproject.toml",
