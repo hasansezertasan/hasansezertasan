@@ -22,7 +22,7 @@ My Python CLI tools are already available through `uv`, but I use Homebrew on ma
 I explored those questions with agentic workflows. I used Claude Code to research and experiment with formula and manifest layouts, CI workflows, and update mechanisms. That work produced two working repositories:
 
 - **[homebrew-tap](https://github.com/hasansezertasan/homebrew-tap)** — `brew install hasansezertasan/tap/cobo`
-- **[scoop-bucket](https://github.com/hasansezertasan/scoop-bucket)** — `scoop bucket add hasansezertasan ...` + `scoop install cobo`
+- **[scoop-bucket](https://github.com/hasansezertasan/scoop-bucket)** — `scoop bucket add hasansezertasan https://github.com/hasansezertasan/scoop-bucket` + `scoop install cobo`
 
 ## Turning It Into Templates
 
