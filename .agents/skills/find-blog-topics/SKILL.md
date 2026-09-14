@@ -53,7 +53,7 @@ Scan the user's GitHub activity and identify topics worth writing about.
              }
            }
          }
-         commitContributionsByRepository(maxRepositories: 20) {
+         commitContributionsByRepository(maxRepositories: 100) {
            repository { nameWithOwner }
            contributions(first: 10) {
              totalCount
@@ -91,8 +91,9 @@ Scan the user's GitHub activity and identify topics worth writing about.
    ```
 
    - Check `pageInfo.hasNextPage` and `totalCount` / `issueCount`. If `hasNextPage` is true, explicitly report that results are truncated (e.g. `Showing 50 of <totalCount> PRs`), or paginate using `after: "<endCursor>"` if a complete scan is required.
-   - PRs merged in the period are fetched via both `mergedPRs` search (capturing PRs opened earlier but merged recently) and `pullRequestContributions`.
-   - Commit contributions provide aggregate counts by repository. For repositories with commits not captured in PRs, inspect commit details via `gh api repos/<owner>/<repo>/commits?since=<start>&until=<end>` or `git log` to extract concrete topics.
+   - `commitContributionsByRepository` is capped at 100 repositories by GitHub's API; if 100 repositories are returned, report that repository commit activity may be truncated.
+   - Combine and deduplicate PRs by URL across `pullRequestContributions` and `mergedPRs` before categorizing and ranking, so PRs both opened and merged in the window are not counted twice.
+   - Commit contributions provide aggregate counts by repository. For repositories with commits not captured in PRs, inspect commit details filtered to the viewer via `gh api "repos/<owner>/<repo>/commits?author=<viewer>&since=<start>&until=<end>"` or `git log --author="<viewer>"` to extract concrete topics.
 
 3. **Categorize topics** — Group findings into:
    - **Technical Deep-Dives** — Complex implementations, migrations, protocol work

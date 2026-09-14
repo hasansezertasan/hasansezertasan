@@ -20,20 +20,32 @@ Write blog posts that match the existing format in the user's blog repository.
    Using the directory found in step 1, list its files and read an existing post to extract the pattern.
 
 3. **Match the format** — Common elements to preserve:
-   - Frontmatter fields (date, categories, slug, draft, authors)
+   - Frontmatter fields (date, categories, slug, draft/published status, authors)
    - Excerpt marker (`<!-- more -->`)
    - Heading style (H1 as title vs in frontmatter)
    - Category conventions
+   - Draft convention:
+     - MkDocs / Hugo: `draft: true` in frontmatter
+     - Jekyll: Save to `_drafts/` (or `published: false` in `_posts/`)
+   - Filename convention:
+     - MkDocs / Hugo: `<slug>.md`
+     - Jekyll: `YYYY-MM-DD-<slug>.md` in `_posts/` (or `<slug>.md` in `_drafts/`)
 
 4. **Generate the post**:
    - Slug from title (lowercase, hyphenated)
-   - `draft: true` by default
-   - Today's date for created/updated
+   - Draft handling matching layout conventions:
+     - MkDocs / Hugo: `draft: true` in frontmatter
+     - Jekyll: Save in `_drafts/` or set `published: false`
+   - Today's date for created/updated or frontmatter date field
    - `<!-- more -->` after intro paragraph
 
-5. **Save with descriptive filename** — Match slug: `distributing-python-clis-via-homebrew-and-scoop.md`
+5. **Save with filename matching layout conventions**:
+   - MkDocs / Hugo: `<posts-directory>/<slug>.md` (e.g. `docs/posts/distributing-python-clis-via-homebrew-and-scoop.md`)
+   - Jekyll: `_posts/YYYY-MM-DD-<slug>.md` (or `_drafts/<slug>.md` if saving as a draft)
 
-## Frontmatter Template
+## Frontmatter Template (MkDocs Example)
+
+> Note: Match the frontmatter structure of the existing post read in step 2 (e.g. Jekyll uses `layout: post` and `title: "..."` in frontmatter; Hugo uses `title` and `date`).
 
 ```yaml
 ---
@@ -75,4 +87,6 @@ Wrap-up, links, call to action.
 - Keep posts concise — 300-600 words is often ideal
 - Include links to repos/PRs when referencing work
 - Use code blocks sparingly and only when they add value
-- After saving, remind user: "Saved with `draft: true` — remove when ready to publish"
+- After saving, remind user how to publish based on layout:
+  - MkDocs / Hugo: "Saved with `draft: true` — remove when ready to publish"
+  - Jekyll: "Saved to `_drafts/<slug>.md` — move to `_posts/YYYY-MM-DD-<slug>.md` when ready to publish" (or remove `published: false`)
