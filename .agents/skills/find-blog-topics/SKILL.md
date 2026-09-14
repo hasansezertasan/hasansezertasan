@@ -11,7 +11,7 @@ Scan the user's GitHub activity and identify topics worth writing about.
 
 1. **Determine time range** — Default to last 14 days. Accept user-specified ranges like "last month", "past 30 days", "since September 1st".
 
-2. **Fetch activity via GraphQL** — Query PRs, issues, and commits:
+2. **Fetch activity via GraphQL** — Query PRs (both created and merged), issues, and commits:
 
    ```bash
    gh api graphql -f query='
@@ -30,6 +30,7 @@ Scan the user's GitHub activity and identify topics worth writing about.
                title
                url
                repository { nameWithOwner }
+               state
                mergedAt
                createdAt
                body
@@ -68,10 +69,29 @@ Scan the user's GitHub activity and identify topics worth writing about.
          }
        }
      }
+     mergedPRs: search(query: "author:@me is:pr merged:<start-date>..<end-date>", type: ISSUE, first: 50) {
+       issueCount
+       pageInfo {
+         hasNextPage
+         endCursor
+       }
+       nodes {
+         ... on PullRequest {
+           title
+           url
+           repository { nameWithOwner }
+           state
+           mergedAt
+           createdAt
+           body
+         }
+       }
+     }
    }'
    ```
 
-   - Check `pageInfo.hasNextPage` and `totalCount`. If `hasNextPage` is true, explicitly report that results are truncated (e.g. `Showing 50 of <totalCount> PRs`), or paginate using `after: "<endCursor>"` if a complete scan is required.
+   - Check `pageInfo.hasNextPage` and `totalCount` / `issueCount`. If `hasNextPage` is true, explicitly report that results are truncated (e.g. `Showing 50 of <totalCount> PRs`), or paginate using `after: "<endCursor>"` if a complete scan is required.
+   - PRs merged in the period are fetched via both `mergedPRs` search (capturing PRs opened earlier but merged recently) and `pullRequestContributions`.
    - Commit contributions provide aggregate counts by repository. For repositories with commits not captured in PRs, inspect commit details via `gh api repos/<owner>/<repo>/commits?since=<start>&until=<end>` or `git log` to extract concrete topics.
 
 3. **Categorize topics** — Group findings into:
@@ -110,5 +130,5 @@ Scan the user's GitHub activity and identify topics worth writing about.
 
 ## Notes
 
-- Focus on merged PRs for completed work; open PRs for "coming soon" ideas
+- Focus on merged PRs (`state: MERGED`) for completed work; open PRs (`state: OPEN`) for "coming soon" ideas; ignore closed unmerged PRs (`state: CLOSED` without `mergedAt`)
 - Cross-reference commit activity with PR context for richer descriptions

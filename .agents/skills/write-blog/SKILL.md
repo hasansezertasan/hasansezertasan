@@ -14,10 +14,10 @@ Write blog posts that match the existing format in the user's blog repository.
 2. **Read an existing post** — Check format, frontmatter structure, and conventions:
 
    ```bash
-   ls docs/posts/
+   ls <posts-directory>/
    ```
 
-   Then read one to extract the pattern.
+   Using the directory found in step 1, list its files and read an existing post to extract the pattern.
 
 3. **Match the format** — Common elements to preserve:
    - Frontmatter fields (date, categories, slug, draft, authors)

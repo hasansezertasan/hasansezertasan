@@ -1,6 +1,6 @@
 ---
 name: announce
-description: Format content for social/messaging channels (WhatsApp, Reddit, Twitter) with language and tone options. Use when the user wants to share something on social media, announce a project, or adapt content for different platforms. Triggers on "make this WhatsApp friendly", "format for Reddit", "announce on Twitter", "Turkish version", "social media post".
+description: Format content for social/messaging channels (WhatsApp, Reddit, Twitter) with language and tone options. Use when the user wants to share something on social media, announce a project, or adapt content for different platforms. Triggers on "make this WhatsApp friendly", "format for Reddit", "announce on Twitter", "Turkish announcement", "Turkish version of announcement", "social media post".
 ---
 
 # Announce
