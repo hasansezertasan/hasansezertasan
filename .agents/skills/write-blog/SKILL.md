@@ -9,7 +9,7 @@ Write blog posts that match the existing format in the user's blog repository.
 
 ## Workflow
 
-1. **Find the posts directory** — Look for `docs/posts/`, `content/posts/`, `_posts/`, or similar
+1. **Find the posts directory** — Look for `docs/posts/`, `content/posts/`, `_posts/` (including nested layouts like `site/_posts/` or `docs/_posts/`), or similar
 
 2. **Read an existing post** — Check format, frontmatter structure, and conventions:
 
@@ -21,27 +21,29 @@ Write blog posts that match the existing format in the user's blog repository.
 
 3. **Match the format** — Common elements to preserve:
     - Frontmatter fields (date, categories, slug, draft/published status, authors)
-    - Excerpt marker (`<!-- more -->`)
+    - Excerpt marker — Reuse the separator found in the existing post read in step 2:
+      - Hugo: `<!--more-->` (exact delimiter, no spaces; required for Hugo manual summary splitting)
+      - MkDocs / others: `<!-- more -->` or `<!--more-->`
     - Heading style (H1 as title vs in frontmatter)
     - Category conventions
     - Draft convention:
       - MkDocs / Hugo: `draft: true` in frontmatter
-      - Jekyll: Save to `_drafts/` (or `published: false` in `_posts/`)
+      - Jekyll: Save to `<posts-parent>/_drafts/` beside `<posts-directory>` (or `published: false` in `<posts-directory>/`)
     - Filename convention:
       - MkDocs / Hugo: `<slug>.md`
-      - Jekyll: `YYYY-MM-DD-<slug>.md` in `_posts/` (or `<slug>.md` in `_drafts/`)
+      - Jekyll: `<posts-directory>/YYYY-MM-DD-<slug>.md` in `<posts-directory>/` (or `<slug>.md` in `<posts-parent>/_drafts/`)
 
 4. **Generate the post**:
     - Slug from title (lowercase, hyphenated)
     - Draft handling matching layout conventions:
       - MkDocs / Hugo: `draft: true` in frontmatter
-      - Jekyll: Save in `_drafts/` or set `published: false`
+      - Jekyll: Save in `<posts-parent>/_drafts/` beside `<posts-directory>` or set `published: false`
     - Today's date for created/updated or frontmatter date field
-    - `<!-- more -->` after intro paragraph
+    - Excerpt marker after intro paragraph matching the discovered convention (`<!--more-->` for Hugo, `<!-- more -->` or `<!--more-->` for MkDocs)
 
 5. **Save with filename matching layout conventions**:
     - MkDocs / Hugo: `<posts-directory>/<slug>.md` (e.g. `docs/posts/distributing-python-clis-via-homebrew-and-scoop.md`)
-    - Jekyll: `_posts/YYYY-MM-DD-<slug>.md` (or `_drafts/<slug>.md` if saving as a draft)
+    - Jekyll: `<posts-directory>/YYYY-MM-DD-<slug>.md` (or `<posts-parent>/_drafts/<slug>.md` beside `<posts-directory>` if saving as a draft)
 
 ## Frontmatter Template (MkDocs Example)
 
@@ -89,4 +91,4 @@ Wrap-up, links, call to action.
 - Use code blocks sparingly and only when they add value
 - After saving, remind user how to publish based on layout:
   - MkDocs / Hugo: "Saved with `draft: true` — remove when ready to publish"
-  - Jekyll: "Saved to `_drafts/<slug>.md` — move to `_posts/YYYY-MM-DD-<slug>.md` when ready to publish" (or remove `published: false`)
+  - Jekyll: "Saved to `<posts-parent>/_drafts/<slug>.md` — move to `<posts-directory>/YYYY-MM-DD-<slug>.md` when ready to publish" (or remove `published: false`)

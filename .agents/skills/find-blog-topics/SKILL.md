@@ -9,7 +9,7 @@ Scan the user's GitHub activity and identify topics worth writing about.
 
 ## Workflow
 
-1. **Determine time range** — Default to last 14 days. Accept user-specified ranges like "last month", "past 30 days", "since September 1st".
+1. **Determine time range** — Default to last 14 days. Accept user-specified ranges like "last month", "past 30 days", "since September 1st". If the requested range exceeds 1 year, split it into consecutive windows of at most 1 year and merge results, as GitHub's `contributionsCollection(from:, to:)` API rejects ranges exceeding 1 year.
 
 2. **Fetch activity via GraphQL** — Query PRs (both created and merged), issues, and commits:
 
@@ -93,7 +93,9 @@ Scan the user's GitHub activity and identify topics worth writing about.
     - Check `pageInfo.hasNextPage` and `totalCount` / `issueCount`. If `hasNextPage` is true, explicitly report that results are truncated (e.g. `Showing 50 of <totalCount> PRs`), or paginate using `after: "<endCursor>"` if a complete scan is required.
     - `commitContributionsByRepository` is capped at 100 repositories by GitHub's API; if 100 repositories are returned, report that repository commit activity may be truncated.
     - Combine and deduplicate PRs by URL across `pullRequestContributions` and `mergedPRs` before categorizing and ranking, so PRs both opened and merged in the window are not counted twice.
-    - Commit contributions provide aggregate counts by repository. For repositories with commits not captured in PRs, inspect commit details filtered to the viewer via `gh api "repos/<owner>/<repo>/commits?author=<viewer>&since=<start>&until=<end>"` or `git log --author="<viewer>"` to extract concrete topics.
+    - Commit contributions provide aggregate counts by repository. For repositories with commits not captured in PRs, inspect commit details filtered to the viewer:
+      - Via REST API (recommended, handles GitHub account associations automatically): `gh api --paginate "repos/<owner>/<repo>/commits?author=<viewer>&since=<start>&until=<end>&per_page=100"`
+      - Via local clone: `git log --author="<author-pattern>" --since="<start>" --until="<end>"`, where `<author-pattern>` matches the user's Git author name or email (e.g. from `git config user.email` or `git config user.name`), not necessarily their GitHub login.
 
 3. **Categorize topics** — Group findings into:
     - **Technical Deep-Dives** — Complex implementations, migrations, protocol work
