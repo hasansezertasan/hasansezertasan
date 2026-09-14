@@ -78,7 +78,7 @@ hooks = [
     "check",
     "--config",
     ".config/proselintrc.json",
-  ], exclude = '^(LICENSE|requirements\.txt|docs/slides/.*)$', files = '\.(md|mdown|markdown)$' },
+  ], exclude = '^(\.agents/.*|\.claude/.*|LICENSE|requirements\.txt|docs/slides/.*)$', files = '\.(md|mdown|markdown)$' },
 ]
 [[repos]]
 repo = "https://github.com/jackdewinter/pymarkdown"

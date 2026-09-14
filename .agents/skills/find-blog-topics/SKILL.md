@@ -20,6 +20,11 @@ Scan the user's GitHub activity and identify topics worth writing about.
        login
        contributionsCollection(from: "<start>", to: "<end>") {
          pullRequestContributions(first: 50) {
+           totalCount
+           pageInfo {
+             hasNextPage
+             endCursor
+           }
            nodes {
              pullRequest {
                title
@@ -32,6 +37,11 @@ Scan the user's GitHub activity and identify topics worth writing about.
            }
          }
          issueContributions(first: 50) {
+           totalCount
+           pageInfo {
+             hasNextPage
+             endCursor
+           }
            nodes {
              issue {
                title
@@ -45,6 +55,11 @@ Scan the user's GitHub activity and identify topics worth writing about.
          commitContributionsByRepository(maxRepositories: 20) {
            repository { nameWithOwner }
            contributions(first: 10) {
+             totalCount
+             pageInfo {
+               hasNextPage
+               endCursor
+             }
              nodes {
                commitCount
                occurredAt
@@ -55,6 +70,9 @@ Scan the user's GitHub activity and identify topics worth writing about.
      }
    }'
    ```
+
+   - Check `pageInfo.hasNextPage` and `totalCount`. If `hasNextPage` is true, explicitly report that results are truncated (e.g. `Showing 50 of <totalCount> PRs`), or paginate using `after: "<endCursor>"` if a complete scan is required.
+   - Commit contributions provide aggregate counts by repository. For repositories with commits not captured in PRs, inspect commit details via `gh api repos/<owner>/<repo>/commits?since=<start>&until=<end>` or `git log` to extract concrete topics.
 
 3. **Categorize topics** — Group findings into:
    - **Technical Deep-Dives** — Complex implementations, migrations, protocol work
@@ -75,23 +93,22 @@ Scan the user's GitHub activity and identify topics worth writing about.
 
 ## Example Output
 
-```
+```markdown
 ## Technical Deep-Dives
 
-1. **"Migrating to PEP 691: The Simple Repository API"** — Content negotiation, 
+1. **"Migrating to PEP 691: The Simple Repository API"** — Content negotiation,
    version normalization, API 1.0 fallbacks. Source: peta#165, peta#173
 
-2. **"Building a Concurrent HTTP Transport Layer"** — Pooled clients, disk caching, 
+2. **"Building a Concurrent HTTP Transport Layer"** — Pooled clients, disk caching,
    conditional requests, offline mode. Source: peta#156→#157→#158
 
 ## Tooling & Automation
 
-3. **"Reusable Homebrew/Scoop Bucket Templates"** — Manifest scaffolding, 
+3. **"Reusable Homebrew/Scoop Bucket Templates"** — Manifest scaffolding,
    update automation, cross-platform CI. Source: tap-template, bucket-template
 ```
 
 ## Notes
 
-- If output is large (>200KB), read from the persisted file path
 - Focus on merged PRs for completed work; open PRs for "coming soon" ideas
 - Cross-reference commit activity with PR context for richer descriptions

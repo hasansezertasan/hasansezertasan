@@ -53,10 +53,10 @@ When user requests a language (e.g., "Turkish", "Türkçe"):
 
 **WhatsApp (Turkish)**:
 
-```
+```text
 Homebrew ve Scoop için template repo'lar 🍺📦
 
-Python CLI'ınızı macOS'ta `brew install`, Windows'ta `scoop install` ile 
+Python CLI'ınızı macOS'ta `brew install`, Windows'ta `scoop install` ile
 kurulabilir yapmak istiyorsanız:
 
 tap-template — Homebrew: PyPI'dan formula scaffold'u, otomatik güncelleme
@@ -68,10 +68,10 @@ bucket-template — Scoop: binary release, pipx/uv shim desteği
 
 **Reddit (English)**:
 
-```
+```markdown
 ## Reusable templates for Homebrew taps and Scoop buckets
 
-If you maintain a Python CLI and want users to `brew install` or `scoop install` 
+If you maintain a Python CLI and want users to `brew install` or `scoop install`
 it without waiting for upstream — these templates handle the boilerplate:
 
 - **tap-template**: Formula scaffolding from PyPI, bottle publishing, auto-updates

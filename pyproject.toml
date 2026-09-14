@@ -10,6 +10,8 @@ dependencies = ["mkdocs-material==9.7.7"]
 Paket = "Paket"
 # "seh" is a phonetic syllable in the pronunciation guide "seh-ZEHR" (Sezer), not a typo of "she".
 seh = "seh"
+# "siz" is Turkish for formal "you", not a typo of "six" or "size".
+siz = "siz"
 
 [tool.pymarkdown]
 # Align pymarkdown with the `.config/markdownlint-cli2.jsonc` settings so both
