@@ -34,8 +34,13 @@ hooks = [
 ]
 [[repos]]
 repo = "https://github.com/crate-ci/typos"
-rev = "v1.50.1"
+rev = "v1.50.2"
 hooks = [{ id = "typos" }]
+[[repos]]
+# Enforces `.editorconfig`; nothing else in this suite does.
+repo = "https://github.com/editorconfig-checker/editorconfig-checker.python"
+rev = "3.11.1"
+hooks = [{ id = "editorconfig-checker" }]
 [[repos]]
 repo = "https://github.com/rhysd/actionlint"
 rev = "v1.7.12"
@@ -93,5 +98,5 @@ hooks = [
 ]
 [[repos]]
 repo = "https://github.com/astral-sh/uv-pre-commit"
-rev = "0.12.13"
+rev = "0.12.17"
 hooks = [{ id = "uv-lock" }]
