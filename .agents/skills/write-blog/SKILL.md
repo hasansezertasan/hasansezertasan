@@ -1,6 +1,6 @@
 ---
 name: write-blog
-description: Write a blog post matching the project's existing format (frontmatter, excerpt markers, categories). Use when the user wants to write a blog post, create a draft, or save content to their blog. Triggers on "write a blog post", "save to blog", "create a post about", "draft a blog".
+description: Write a blog post matching the project's existing format (frontmatter, excerpt markers, categories). Use when the user wants to write a blog post, create a draft, or save content to their blog. Triggers on "write a blog post", "save to blog", "create a blog post about", "draft a blog".
 ---
 
 # Write Blog
@@ -41,7 +41,7 @@ Write blog posts that match the existing format in the user's blog repository.
     - Dates: for a new post, set both `created` and `updated` (or the layout's single date field) to today; when updating an existing post, preserve its existing `created` value and set only `updated` to today
     - Excerpt marker after intro paragraph matching the discovered convention (`<!--more-->` for Hugo, `<!-- more -->` or `<!--more-->` for MkDocs)
 
-5. **Check the destination, then save with a filename matching layout conventions** — The path is derived from the slug, so a new draft can silently overwrite an existing post. Test the target first (e.g. `test -e <path>`); if it already exists, ask whether to update that post or choose another slug, and never overwrite without confirmation.
+5. **Check the destination, then save with a filename matching layout conventions** — The path is derived from the slug, so a new draft can silently overwrite an existing post. Search the discovered posts directory *and* its sibling `_drafts` for the slug rather than testing only the computed path — a Jekyll post carries a date prefix, so `YYYY-MM-DD-<slug>.md` under another date, or a published post when the new destination is a draft, would otherwise go unnoticed (e.g. `ls <posts-directory> <posts-parent>/_drafts 2>/dev/null | grep -i <slug>`). If anything matches, ask whether to update that post or choose another slug, and never overwrite or duplicate without confirmation.
     - MkDocs / Hugo: `<posts-directory>/<slug>.md` (e.g. `docs/posts/distributing-python-clis-via-homebrew-and-scoop.md`)
     - Jekyll: `<posts-directory>/YYYY-MM-DD-<slug>.md` (or `<posts-parent>/_drafts/<slug>.md` beside `<posts-directory>` if saving as a draft)
 

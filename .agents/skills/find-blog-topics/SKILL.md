@@ -19,6 +19,8 @@ Scan the user's GitHub activity and identify topics worth writing about.
       viewer {
         login
         contributionsCollection(from: "<start>", to: "<end>") {
+          hasAnyRestrictedContributions
+          restrictedContributionsCount
           pullRequestContributions(first: 50) {
             totalCount
             pageInfo {
@@ -108,12 +110,13 @@ Scan the user's GitHub activity and identify topics worth writing about.
     }'
     ```
 
+    - If `hasAnyRestrictedContributions` is true, the token cannot see some of the user's work — private repositories outside its scope, or an organization whose SSO it is not authorized for. Report `restrictedContributionsCount` as excluded rather than presenting the scan as complete.
     - Check `pageInfo.hasNextPage` and `totalCount` / `issueCount`. If `hasNextPage` is true, explicitly report that results are truncated (e.g. `Showing 50 of <totalCount> PRs`), or paginate using `after: "<endCursor>"` if a complete scan is required.
     - `commitContributionsByRepository` is capped at 100 repositories by GitHub's API; if 100 repositories are returned, report that repository commit activity may be truncated.
     - Combine and deduplicate PRs by URL across `pullRequestContributions` and `mergedPRs` before categorizing and ranking, so PRs both opened and merged in the window are not counted twice.
     - Do the same for issues across `issueContributions` and `closedIssues`: `issueContributions` holds issues *opened* in the window, so an issue opened earlier and resolved during it only arrives via `closedIssues`.
     - Commit contributions give only per-repository counts and dates, never commit content, and cannot show whether a commit belongs to a PR. Fetch commit details for **every** repository reporting commit contributions — not only those without PR activity — then classify them against the PR set following [Attribution caveats](#attribution-caveats):
-      - Via REST API (resolves GitHub account association): `gh api --paginate "repos/<owner>/<repo>/commits?author=<viewer>&since=<start>&until=<end>&per_page=100"`, repeated with `&sha=gh-pages` when the repository reports `gh-pages` activity, because `sha` defaults to the default branch
+      - Via REST API (resolves GitHub account association): `gh api --paginate "repos/<owner>/<repo>/commits?author=<viewer>&since=<start>&until=<end>&per_page=100"`. `sha` defaults to the default branch, and the aggregate never says which branch produced the activity, so do not try to infer it: probe the repository with `gh api "repos/<owner>/<repo>/branches/gh-pages"` (404 when absent) and, when it exists, run the request again with `&sha=gh-pages`, merging both result sets by SHA
       - Via local clone: `git log --all --author="<author-pattern>" --since="<start>" --until="<end>"`, where `<author-pattern>` matches the user's Git name or email (`git config user.email`), not their GitHub login
 
 3. **Categorize topics** — Group findings into:
