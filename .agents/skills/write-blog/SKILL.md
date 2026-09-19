@@ -41,7 +41,7 @@ Write blog posts that match the existing format in the user's blog repository.
     - Today's date for created/updated or frontmatter date field
     - Excerpt marker after intro paragraph matching the discovered convention (`<!--more-->` for Hugo, `<!-- more -->` or `<!--more-->` for MkDocs)
 
-5. **Save with filename matching layout conventions**:
+5. **Check the destination, then save with a filename matching layout conventions** — The path is derived from the slug, so a new draft can silently overwrite an existing post. Test the target first (e.g. `test -e <path>`); if it already exists, ask whether to update that post or choose another slug, and never overwrite without confirmation.
     - MkDocs / Hugo: `<posts-directory>/<slug>.md` (e.g. `docs/posts/distributing-python-clis-via-homebrew-and-scoop.md`)
     - Jekyll: `<posts-directory>/YYYY-MM-DD-<slug>.md` (or `<posts-parent>/_drafts/<slug>.md` beside `<posts-directory>` if saving as a draft)
 
