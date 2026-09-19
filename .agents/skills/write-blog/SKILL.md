@@ -13,35 +13,35 @@ Write blog posts that match the existing format in the user's blog repository.
 
 2. **Read an existing post** — Check format, frontmatter structure, and conventions:
 
-   ```bash
-   ls <posts-directory>/
-   ```
+    ```bash
+    ls <posts-directory>/
+    ```
 
-   Using the directory found in step 1, list its files and read an existing post to extract the pattern.
+    Using the directory found in step 1, list its files and read an existing post to extract the pattern.
 
 3. **Match the format** — Common elements to preserve:
-   - Frontmatter fields (date, categories, slug, draft/published status, authors)
-   - Excerpt marker (`<!-- more -->`)
-   - Heading style (H1 as title vs in frontmatter)
-   - Category conventions
-   - Draft convention:
-     - MkDocs / Hugo: `draft: true` in frontmatter
-     - Jekyll: Save to `_drafts/` (or `published: false` in `_posts/`)
-   - Filename convention:
-     - MkDocs / Hugo: `<slug>.md`
-     - Jekyll: `YYYY-MM-DD-<slug>.md` in `_posts/` (or `<slug>.md` in `_drafts/`)
+    - Frontmatter fields (date, categories, slug, draft/published status, authors)
+    - Excerpt marker (`<!-- more -->`)
+    - Heading style (H1 as title vs in frontmatter)
+    - Category conventions
+    - Draft convention:
+      - MkDocs / Hugo: `draft: true` in frontmatter
+      - Jekyll: Save to `_drafts/` (or `published: false` in `_posts/`)
+    - Filename convention:
+      - MkDocs / Hugo: `<slug>.md`
+      - Jekyll: `YYYY-MM-DD-<slug>.md` in `_posts/` (or `<slug>.md` in `_drafts/`)
 
 4. **Generate the post**:
-   - Slug from title (lowercase, hyphenated)
-   - Draft handling matching layout conventions:
-     - MkDocs / Hugo: `draft: true` in frontmatter
-     - Jekyll: Save in `_drafts/` or set `published: false`
-   - Today's date for created/updated or frontmatter date field
-   - `<!-- more -->` after intro paragraph
+    - Slug from title (lowercase, hyphenated)
+    - Draft handling matching layout conventions:
+      - MkDocs / Hugo: `draft: true` in frontmatter
+      - Jekyll: Save in `_drafts/` or set `published: false`
+    - Today's date for created/updated or frontmatter date field
+    - `<!-- more -->` after intro paragraph
 
 5. **Save with filename matching layout conventions**:
-   - MkDocs / Hugo: `<posts-directory>/<slug>.md` (e.g. `docs/posts/distributing-python-clis-via-homebrew-and-scoop.md`)
-   - Jekyll: `_posts/YYYY-MM-DD-<slug>.md` (or `_drafts/<slug>.md` if saving as a draft)
+    - MkDocs / Hugo: `<posts-directory>/<slug>.md` (e.g. `docs/posts/distributing-python-clis-via-homebrew-and-scoop.md`)
+    - Jekyll: `_posts/YYYY-MM-DD-<slug>.md` (or `_drafts/<slug>.md` if saving as a draft)
 
 ## Frontmatter Template (MkDocs Example)
 
