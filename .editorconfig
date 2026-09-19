@@ -11,3 +11,8 @@ indent_style = space
 end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
+
+# YAML, TOML, JSON and Markdown are written at 2 spaces, which is what
+# yamlfmt, taplo-format and markdownlint-cli2 (MD007: indent 2) enforce.
+[*.{yml,yaml,toml,json,jsonc,md,markdown}]
+indent_size = 2
