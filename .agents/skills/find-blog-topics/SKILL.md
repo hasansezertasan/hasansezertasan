@@ -93,11 +93,9 @@ Scan the user's GitHub activity and identify topics worth writing about.
     - Check `pageInfo.hasNextPage` and `totalCount` / `issueCount`. If `hasNextPage` is true, explicitly report that results are truncated (e.g. `Showing 50 of <totalCount> PRs`), or paginate using `after: "<endCursor>"` if a complete scan is required.
     - `commitContributionsByRepository` is capped at 100 repositories by GitHub's API; if 100 repositories are returned, report that repository commit activity may be truncated.
     - Combine and deduplicate PRs by URL across `pullRequestContributions` and `mergedPRs` before categorizing and ranking, so PRs both opened and merged in the window are not counted twice.
-    - Commit contributions provide only per-repository counts and dates, which cannot show whether a commit belongs to a PR. Inspect commit details for **every** repository reporting commit contributions — not only those without PR activity, or direct commits made alongside a PR in the same repository are silently dropped — filtered to the viewer:
-      - Via REST API (recommended, handles GitHub account associations automatically): `gh api --paginate "repos/<owner>/<repo>/commits?author=<viewer>&since=<start>&until=<end>&per_page=100"`
-      - Via local clone: `git log --author="<author-pattern>" --since="<start>" --until="<end>"`, where `<author-pattern>` matches the user's Git author name or email (e.g. from `git config user.email` or `git config user.name`), not necessarily their GitHub login.
-    - Deduplicate those commits against the PR set before ranking: collect each PR's commit SHAs with `gh api --paginate "repos/<owner>/<repo>/pulls/<number>/commits?per_page=100" --jq '.[].sha'` — not `gh pr view --json commits`, which stops at 100 — then drop commits whose SHA appears there and treat the remainder as direct-commit topics. GitHub caps that endpoint at 250 commits per PR, so if a PR reports more, report the leftover commits as unverified rather than as confirmed direct work.
-    - `contributionsCollection` counts only commits that landed on a repository's default branch (or `gh-pages`), so work still living on an unmerged branch never appears here — and GitHub's commit search is built from the same default-branch index, so it cannot recover it either. Branch work that already has an open PR is still covered by `pullRequestContributions`; for branch work with no PR, scan local clones the user names with `git log --all --author="<author-pattern>" --since="<start>" --until="<end>"`, and state in the output that unmerged, PR-less branch work outside those clones was not scanned.
+    - Commit contributions give only per-repository counts and dates, never commit content, and cannot show whether a commit belongs to a PR. Fetch commit details for **every** repository reporting commit contributions — not only those without PR activity — then classify them against the PR set following [Attribution caveats](#attribution-caveats):
+      - Via REST API (resolves GitHub account association): `gh api --paginate "repos/<owner>/<repo>/commits?author=<viewer>&since=<start>&until=<end>&per_page=100"`, repeated with `&sha=gh-pages` when the repository reports `gh-pages` activity, because `sha` defaults to the default branch
+      - Via local clone: `git log --all --author="<author-pattern>" --since="<start>" --until="<end>"`, where `<author-pattern>` matches the user's Git name or email (`git config user.email`), not their GitHub login
 
 3. **Categorize topics** — Group findings into:
     - **Technical Deep-Dives** — Complex implementations, migrations, protocol work
@@ -132,6 +130,17 @@ Scan the user's GitHub activity and identify topics worth writing about.
 3. **"Reusable Homebrew/Scoop Bucket Templates"** — Manifest scaffolding,
     update automation, cross-platform CI. Source: tap-template, bucket-template
 ```
+
+## Attribution caveats
+
+GitHub's attribution model does not map cleanly onto Git authorship, so a commit can be the user's real work and still be missed, or be one change counted twice. Report what can be verified, and label the rest **unverified** rather than presenting a guess as fact.
+
+- **Squash and rebase merges rewrite SHAs.** A squash-merged PR lands one new commit on the base branch that appears in no PR commit listing, so plain SHA subtraction reports it as direct work and ranks the same change twice. Collect `mergeCommit.oid` (`gh pr view <pr-url> --json mergeCommit`) alongside each PR's commits, and treat a leftover commit whose message or patch matches a collected PR as that same work.
+- **PR commit listings are capped.** `gh api --paginate ".../pulls/<number>/commits"` stops at 250 (`gh pr view --json commits` stops at 100). Beyond that, leftovers are unverified, not confirmed direct work.
+- **The contribution graph covers only the default branch and `gh-pages`.** Work on an unmerged branch never appears, and commit search is built from the same index, so it cannot recover it either.
+- **Opening a PR is the contribution, not updating one.** `pullRequestContributions` records PRs *opened* in the window, so an older open PR that received new commits during it appears in neither that connection nor `mergedPRs`. Search for those separately with `gh search prs --author=@me --state=open --updated=<start>..<end>`, then check the commit dates on what comes back.
+- **Only PR-less, unlisted branch work needs a local scan.** That is the real boundary of "already covered by the PR queries"; anything outside it must be scanned from a clone the user names, or disclosed as unscanned.
+- **Co-authored commits credit the user in a trailer, not the author header.** A `Co-authored-by:` credit counts on the contribution graph, but both the REST `author=` filter and `git log --author` match the author header and drop it. When an aggregate reports activity the detail lookup cannot account for, re-scan without the author filter and match `Co-authored-by:` trailers against the viewer's known identities.
 
 ## Notes
 
