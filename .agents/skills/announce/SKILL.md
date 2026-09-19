@@ -62,8 +62,8 @@ kurulabilir yapmak istiyorsanız:
 tap-template — Homebrew: PyPI'dan formula scaffold'u, otomatik güncelleme
 bucket-template — Scoop: binary release, pipx/uv shim desteği
 
-👉 github.com/hasansezertasan/tap-template
-👉 github.com/hasansezertasan/bucket-template
+👉 https://github.com/hasansezertasan/tap-template
+👉 https://github.com/hasansezertasan/bucket-template
 ```
 
 **Reddit (English)**:
