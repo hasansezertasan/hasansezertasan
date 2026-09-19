@@ -38,7 +38,7 @@ Write blog posts that match the existing format in the user's blog repository.
     - Draft handling matching layout conventions:
       - MkDocs / Hugo: `draft: true` in frontmatter
       - Jekyll: Save in `<posts-parent>/_drafts/` beside `<posts-directory>` or set `published: false`
-    - Today's date for created/updated or frontmatter date field
+    - Dates: for a new post, set both `created` and `updated` (or the layout's single date field) to today; when updating an existing post, preserve its existing `created` value and set only `updated` to today
     - Excerpt marker after intro paragraph matching the discovered convention (`<!--more-->` for Hugo, `<!-- more -->` or `<!--more-->` for MkDocs)
 
 5. **Check the destination, then save with a filename matching layout conventions** — The path is derived from the slug, so a new draft can silently overwrite an existing post. Test the target first (e.g. `test -e <path>`); if it already exists, ask whether to update that post or choose another slug, and never overwrite without confirmation.
@@ -64,12 +64,14 @@ slug: title-as-slug
 
 ## Structure
 
+> Note: The bracketed placeholders below are conditional — fill them from the post read in step 2 rather than copying this skeleton verbatim.
+
 ```markdown
-# Title
+[Body title in the discovered heading style — omit it when the layout carries the title in frontmatter, or it will be duplicated]
 
 Intro paragraph — hook the reader, state what this covers.
 
-<!-- more -->
+[Exact excerpt marker copied from the existing post — `<!--more-->` for Hugo, `<!-- more -->` for MkDocs; omit when the layout uses none]
 
 ## Section 1
 
