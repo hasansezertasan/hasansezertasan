@@ -34,7 +34,7 @@ hooks = [
 ]
 [[repos]]
 repo = "https://github.com/crate-ci/typos"
-rev = "v1.50.2"
+rev = "v1.50.3"
 hooks = [{ id = "typos" }]
 [[repos]]
 # Enforces `.editorconfig`; nothing else in this suite does.
