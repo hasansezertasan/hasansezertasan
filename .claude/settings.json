@@ -1,0 +1,6 @@
+{
+  "extraKnownMarketplaces": {},
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true
+  }
+}
