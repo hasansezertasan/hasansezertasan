@@ -16,6 +16,10 @@ run = "uv run mkdocs serve"
 description = "Building Docs"
 run = "uv run mkdocs build --clean"
 
+[tasks."post:test"]
+description = "Test the post scaffolder"
+run = "uv run --with pytest --with pyyaml --with-requirements scripts/new_post.py pytest scripts/"
+
 [tasks.prek]
 description = "Run prek hooks"
 run = "prek -a"
