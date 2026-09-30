@@ -2,8 +2,10 @@ import datetime as dt
 
 import pytest
 import yaml
+from typer.testing import CliRunner
 
-from new_post import make_slug, render_post
+import new_post
+from new_post import PostError, app, create_post, make_slug, render_post
 
 TODAY = dt.date(2026, 10, 1)
 
@@ -72,3 +74,99 @@ def test_render_post_quotes_yaml_unsafe_categories():
     meta = frontmatter(text)
     assert meta["categories"] == categories
     assert meta["slug"] == "hi"
+
+
+def test_create_post_writes_file(tmp_path):
+    path = create_post("Şişli'de Ağır Çözüm", ["python"], None, True, tmp_path, TODAY)
+    assert path == tmp_path / "sisli-de-agir-cozum.md"
+    text = path.read_text(encoding="utf-8")
+    assert "\n# Şişli'de Ağır Çözüm\n" in text
+    assert frontmatter(text)["slug"] == "sisli-de-agir-cozum"
+
+
+def test_create_post_slug_override(tmp_path):
+    path = create_post("Anything", [], "custom-slug", True, tmp_path, TODAY)
+    assert path.name == "custom-slug.md"
+    assert frontmatter(path.read_text(encoding="utf-8"))["slug"] == "custom-slug"
+
+
+@pytest.mark.parametrize("bad", ["Bad_Slug", "has space", "-lead", "double--hyphen", ""])
+def test_create_post_rejects_invalid_slug(tmp_path, bad):
+    with pytest.raises(PostError, match="invalid --slug"):
+        create_post("Title", [], bad, True, tmp_path, TODAY)
+    assert list(tmp_path.iterdir()) == []
+
+
+def test_create_post_empty_slug_hints_at_flag(tmp_path):
+    with pytest.raises(PostError, match="pass --slug"):
+        create_post("!!!", [], None, True, tmp_path, TODAY)
+
+
+@pytest.mark.parametrize("slug", [None, "blank"])
+def test_create_post_rejects_blank_title(tmp_path, slug):
+    with pytest.raises(PostError, match="title must not be empty"):
+        create_post(" \n ", [], slug, True, tmp_path, TODAY)
+    assert list(tmp_path.iterdir()) == []
+
+
+def test_create_post_normalizes_title_whitespace(tmp_path):
+    path = create_post("  Multi\n  line   title ", [], None, True, tmp_path, TODAY)
+    assert path.name == "multi-line-title.md"
+    assert "\n# Multi line title\n" in path.read_text(encoding="utf-8")
+
+
+def test_create_post_dedupes_and_strips_categories(tmp_path):
+    path = create_post("Hi", ["python", " uv ", "python", ""], None, True, tmp_path, TODAY)
+    assert frontmatter(path.read_text(encoding="utf-8"))["categories"] == ["python", "uv"]
+
+
+def test_create_post_refuses_to_overwrite(tmp_path):
+    existing = tmp_path / "hello-world.md"
+    existing.write_text("original", encoding="utf-8")
+    with pytest.raises(PostError, match="post already exists"):
+        create_post("Hello World", [], None, True, tmp_path, TODAY)
+    assert existing.read_text(encoding="utf-8") == "original"
+
+
+def test_create_post_missing_posts_dir(tmp_path):
+    with pytest.raises(PostError, match="posts directory not found"):
+        create_post("Hi", [], None, True, tmp_path / "nope", TODAY)
+
+
+@pytest.fixture
+def posts_dir(tmp_path, monkeypatch):
+    monkeypatch.setattr(new_post, "POSTS_DIR", tmp_path)
+    return tmp_path
+
+
+def test_cli_creates_draft_and_prints_only_the_path(posts_dir):
+    result = CliRunner().invoke(app, ["Hello World", "-c", "python", "--category", "uv"])
+    assert result.exit_code == 0, result.stderr
+    assert result.stdout == f"{posts_dir / 'hello-world.md'}\n"
+    assert result.stderr == ""
+    meta = frontmatter((posts_dir / "hello-world.md").read_text(encoding="utf-8"))
+    assert meta["draft"] is True
+    assert meta["categories"] == ["python", "uv"]
+    assert meta["date"]["created"] == dt.date.today()
+
+
+def test_cli_publish_and_slug(posts_dir):
+    result = CliRunner().invoke(app, ["Hello", "--slug", "hi-there", "--publish"])
+    assert result.exit_code == 0, result.stderr
+    assert "draft" not in frontmatter((posts_dir / "hi-there.md").read_text(encoding="utf-8"))
+
+
+def test_cli_existing_post_exits_1_on_stderr(posts_dir):
+    (posts_dir / "hello.md").write_text("original", encoding="utf-8")
+    result = CliRunner().invoke(app, ["Hello"])
+    assert result.exit_code == 1
+    assert result.stdout == ""
+    assert result.stderr.startswith("error: post already exists:")
+    assert (posts_dir / "hello.md").read_text(encoding="utf-8") == "original"
+
+
+def test_cli_empty_slug_exits_1(posts_dir):
+    result = CliRunner().invoke(app, ["!!!"])
+    assert result.exit_code == 1
+    assert result.stdout == ""
+    assert result.stderr == "error: can't derive a slug from title; pass --slug\n"
