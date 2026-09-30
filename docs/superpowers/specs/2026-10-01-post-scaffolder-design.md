@@ -29,11 +29,12 @@ Executable Python script with a PEP 723 metadata block:
 #!/usr/bin/env -S uv run --script
 # /// script
 # requires-python = ">=3.14"
-# dependencies = ["typer==0.27.2"]
+# dependencies = ["typer==0.27.2", "python-slugify[anyascii]==9.1.2"]
 # ///
 ```
 
-`typer` is scoped to the script; `pyproject.toml` dependencies are unchanged.
+Both dependencies are scoped to the script; `pyproject.toml` dependencies are
+unchanged.
 
 #### CLI
 
@@ -44,15 +45,17 @@ Executable Python script with a PEP 723 metadata block:
 | `--slug` | derived from title | Overrides slug and filename |
 | `--publish` | off | Omits `draft: true` |
 
-**Slug derivation** (`slugify(title) -> str`, a pure function):
+**Slug derivation** — `slugify(title, backend="anyascii")` from
+[python-slugify](https://github.com/un33k/python-slugify), with the `anyascii`
+extra for transliteration (both permissively licensed: MIT, ISC).
 
-1. Lowercase.
-2. Map Turkish letters: `ı→i`, `ş→s`, `ğ→g`, `ç→c`, `ö→o`, `ü→u`
-  (applied after lowercasing; `İ` lowercases to `i̇`, whose combining dot is
-  removed in step 3).
-3. NFKD-normalize and drop combining marks.
-4. Replace each run of characters outside `[a-z0-9]` with a single `-`.
-5. Strip leading/trailing `-`.
+- `backend="anyascii"` must be passed explicitly: python-slugify's default
+  `auto` backend picks Unidecode (GPL) or text-unidecode, never anyascii.
+- Chosen over `inflection`, whose NFKD-based transliteration drops the Turkish
+  dotless `ı` (`Ağır` → `agr`), and over hand-rolled NFKD plus a letter map.
+- Verified outputs: `"Şişli'de Ağır Çözüm"` → `sisli-de-agir-cozum`,
+  `"İstanbul ılık"` → `istanbul-ilik`, `"C++ & Rust: 2026 — Notlar…"` →
+  `c-rust-2026-notlar`, `"!!!"` → `""`.
 
 An explicit `--slug` is used verbatim after validating it matches
 `^[a-z0-9]+(-[a-z0-9]+)*$`; otherwise exit 1.
@@ -105,7 +108,8 @@ Pytest tests using typer's `CliRunner` against a temporary posts directory:
 
 - Slugs: plain ASCII, Turkish (`"Şişli'de Ağır Çözüm"` → `sisli-de-agir-cozum`,
   `"İstanbul ılık"` → `istanbul-ilik`), punctuation/whitespace runs,
-  leading/trailing symbols.
+  leading/trailing symbols. `"👍 Ship It"` → `thumbsup-ship-it` pins the
+  `anyascii` backend: text-unidecode (the `auto` fallback) yields `ship-it`.
 - `--slug` override, and rejection of an invalid `--slug`.
 - Repeated `-c` preserves order; no `-c` yields `categories: []`.
 - `--publish` omits `draft: true`; default includes it.
@@ -126,7 +130,7 @@ run = "uv run scripts/new_post.py"
 
 [tasks."post:test"]
 description = "Test the post scaffolder"
-run = "uv run --with pytest --with typer==0.27.2 pytest scripts/"
+run = "uv run --with pytest --with-requirements scripts/new_post.py pytest scripts/"
 ```
 
 mise forwards extra arguments to `run`, so `mise run post:new "Title" -c x`
@@ -141,13 +145,13 @@ enable it for the scripts directory:
 "pep723": { "managerFilePatterns": ["/^scripts/.+\\.py$/"] }
 ```
 
-This keeps the pinned `typer` in `new_post.py` updated by a native manager.
-The `typer==0.27.2` pin in the `post:test` task is a second copy Renovate
-cannot see; to avoid it, `post:test` instead runs
+This keeps the pinned `typer` and `python-slugify` in `new_post.py` updated by
+a native manager. Pinning them again in the `post:test` task would be a second
+copy Renovate cannot see; to avoid it, `post:test` instead runs
 `uv run --with pytest --with-requirements scripts/new_post.py pytest scripts/`,
 which reads the script's own inline metadata. Implementation verifies this
 works with the installed `uv`; if it does not, drop the pin from `post:test`
-(`--with typer`) rather than duplicating it.
+(`--with typer --with 'python-slugify[anyascii]'`) rather than duplicating it.
 
 ### `write-blog` skill (`.agents/skills/write-blog/SKILL.md`)
 
