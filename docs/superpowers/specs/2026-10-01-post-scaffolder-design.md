@@ -82,8 +82,24 @@ TODO: intro paragraph.
 <!-- more -->
 ```
 
-With `--publish`, the `draft: true` line is omitted. The title is written to
-the H1 unchanged.
+With `--publish`, the `draft: true` line is omitted.
+
+The `TODO: intro paragraph.` placeholder is a deliberate gate: the proselint
+prek hook rejects it, so a scaffolded post cannot be committed until its intro
+is written (author's decision, 2026-10-01).
+
+**Input normalization** (added while planning, from the plan's Review Focus):
+
+- Title: whitespace runs, including newlines, collapse to single spaces and
+  the ends are trimmed; the result is written to the H1. A blank title exits 1
+  with `title must not be empty`, even when `--slug` is given.
+- Slug: capped at 80 characters on a word boundary
+  (`max_length=80, word_boundary=True`), so long titles cannot exceed
+  filesystem name limits.
+- Categories: stripped, blanks dropped, duplicates removed keeping first
+  order. Values matching `^[a-z0-9][a-z0-9._-]*$` (e.g. `astral.sh`) are
+  written plain, as in existing posts; anything else is double-quoted so it
+  cannot break the YAML (`"devops: ci"`, `"C++"`).
 
 **Paths** — the posts directory is resolved from the script's location
 (`Path(__file__).resolve().parent.parent / "docs" / "posts"`), so the command
@@ -130,7 +146,7 @@ run = "uv run scripts/new_post.py"
 
 [tasks."post:test"]
 description = "Test the post scaffolder"
-run = "uv run --with pytest --with-requirements scripts/new_post.py pytest scripts/"
+run = "uv run --with pytest --with pyyaml --with-requirements scripts/new_post.py pytest scripts/"
 ```
 
 mise forwards extra arguments to `run`, so `mise run post:new "Title" -c x`
@@ -138,8 +154,9 @@ works. `pytest` is never added to the project.
 
 ### Renovate (`.github/renovate.json`)
 
-Renovate's native `pep723` manager has no default `managerFilePatterns`, so
-enable it for the scripts directory:
+Renovate's native `pep723` manager has no default `managerFilePatterns`
+(verified in Renovate's source: it is opt-in), so enable it for the scripts
+directory:
 
 ```json
 "pep723": { "managerFilePatterns": ["/^scripts/.+\\.py$/"] }
@@ -148,10 +165,9 @@ enable it for the scripts directory:
 This keeps the pinned `typer` and `python-slugify` in `new_post.py` updated by
 a native manager. Pinning them again in the `post:test` task would be a second
 copy Renovate cannot see; to avoid it, `post:test` instead runs
-`uv run --with pytest --with-requirements scripts/new_post.py pytest scripts/`,
-which reads the script's own inline metadata. Implementation verifies this
-works with the installed `uv`; if it does not, drop the pin from `post:test`
-(`--with typer --with 'python-slugify[anyascii]'`) rather than duplicating it.
+`uv run --with pytest --with pyyaml --with-requirements scripts/new_post.py pytest scripts/`,
+which reads the script's own inline metadata (verified with the installed
+`uv`). PyYAML is test-only, used to parse the generated frontmatter.
 
 ### `write-blog` skill (`.agents/skills/write-blog/SKILL.md`)
 
