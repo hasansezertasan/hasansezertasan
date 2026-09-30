@@ -21,7 +21,10 @@ SLUG_MAX_LENGTH = 80
 SLUG_PATTERN = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 # Categories matching this are emitted as plain YAML scalars (e.g. `astral.sh`);
 # anything else is double-quoted so it cannot change the frontmatter's structure.
-PLAIN_CATEGORY = re.compile(r"^[a-z0-9][a-z0-9._-]*$")
+# A leading letter rules out numbers and dates (`2026`, `0x1f`, `2026-10-01`).
+PLAIN_CATEGORY = re.compile(r"^[a-z][a-z0-9._-]*$")
+# Plain scalars YAML 1.1 (PyYAML, which MkDocs uses) loads as bool or None.
+YAML_RESERVED = frozenset({"null", "true", "false", "yes", "no", "on", "off", "y", "n"})
 
 
 class PostError(Exception):
@@ -34,7 +37,9 @@ def make_slug(title: str) -> str:
 
 
 def yaml_scalar(value: str) -> str:
-    return value if PLAIN_CATEGORY.fullmatch(value) else json.dumps(value, ensure_ascii=False)
+    if PLAIN_CATEGORY.fullmatch(value) and value not in YAML_RESERVED:
+        return value
+    return json.dumps(value, ensure_ascii=False)
 
 
 def render_post(title: str, slug: str, categories: list[str], draft: bool, today: dt.date) -> str:

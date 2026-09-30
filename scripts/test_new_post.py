@@ -76,6 +76,16 @@ def test_render_post_quotes_yaml_unsafe_categories():
     assert meta["slug"] == "hi"
 
 
+@pytest.mark.parametrize(
+    "category",
+    ["null", "true", "yes", "on", "no", "off", "y", "n", "2026", "1.0", "1_000", "0x1f", "2026-10-01"],
+)
+def test_render_post_quotes_categories_yaml_would_retype(category):
+    # Unquoted, these load as bool/None/int/float/date and MkDocs aborts the build.
+    meta = frontmatter(render_post("Hi", "hi", [category], True, TODAY))
+    assert meta["categories"] == [category]
+
+
 def test_create_post_writes_file(tmp_path):
     path = create_post("Şişli'de Ağır Çözüm", ["python"], None, True, tmp_path, TODAY)
     assert path == tmp_path / "sisli-de-agir-cozum.md"

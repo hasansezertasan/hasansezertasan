@@ -97,9 +97,12 @@ is written (author's decision, 2026-10-01).
   (`max_length=80, word_boundary=True`), so long titles cannot exceed
   filesystem name limits.
 - Categories: stripped, blanks dropped, duplicates removed keeping first
-  order. Values matching `^[a-z0-9][a-z0-9._-]*$` (e.g. `astral.sh`) are
-  written plain, as in existing posts; anything else is double-quoted so it
-  cannot break the YAML (`"devops: ci"`, `"C++"`).
+  order. Values matching `^[a-z][a-z0-9._-]*$` (e.g. `astral.sh`) are
+  written plain, as in existing posts, unless they are YAML 1.1 reserved
+  words (`null`, `true`, `false`, `yes`, `no`, `on`, `off`, `y`, `n`);
+  anything else is double-quoted so it cannot break the YAML or be retyped
+  on load (`"devops: ci"`, `"C++"`, `"2026"`, `"yes"`). A retyped category
+  (bool, None, number, date) makes `mkdocs build` abort.
 
 **Paths** — the posts directory is resolved from the script's location
 (`Path(__file__).resolve().parent.parent / "docs" / "posts"`), so the command
