@@ -33,7 +33,25 @@ Write blog posts that match the existing format in the user's blog repository.
       - MkDocs / Hugo: `<slug>.md`
       - Jekyll: `<posts-directory>/YYYY-MM-DD-<slug>.md` in `<posts-directory>/` (or `<slug>.md` in `<posts-parent>/_drafts/`)
 
-4. **Generate the post**:
+4. **Scaffold with the repo's command, if it has one** — Check for the task rather than a script file, since an unrelated `scripts/new_post.py` proves nothing:
+
+    ```bash
+    mise tasks info post:new >/dev/null 2>&1 && mise run post:new -- --help
+    ```
+
+    Use it only if the task exists and its help lists `--category`, `--slug`, and `--publish`; otherwise go to step 5. Then create the file with it instead of writing frontmatter by hand:
+
+    ```bash
+    mise run post:new -- "<Title>" -c <category> -c <category>
+    ```
+
+    - Use the categories chosen from existing posts; add `--slug <slug>` only when the user wants a specific one, and `--publish` only when they ask to publish immediately.
+    - On success it prints the created path — open that file, replace the `TODO: intro paragraph.` line with the intro, and write the sections below `<!-- more -->`. Keep the frontmatter it generated. The pre-commit prose linter rejects a leftover `TODO`, so the intro must be written before committing.
+    - If it exits 1 with `error: post already exists: <path>`, ask whether to update that post or choose another slug; never delete the existing file to make room.
+    - If it exits 1 with any other `error: …` message, report it to the user rather than falling back silently.
+    - After a successful scaffold, skip steps 5 and 6 below — they are the manual fallback for repositories without a compatible command.
+
+5. **Generate the post** (manual fallback):
     - Slug from title (lowercase, hyphenated)
     - Draft handling matching layout conventions:
       - MkDocs / Hugo: `draft: true` in frontmatter
@@ -41,7 +59,7 @@ Write blog posts that match the existing format in the user's blog repository.
     - Dates: for a new post, set both `created` and `updated` (or the layout's single date field) to today; when updating an existing post, preserve its existing `created` value and set only `updated` to today
     - Excerpt marker after intro paragraph matching the discovered convention (`<!--more-->` for Hugo, `<!-- more -->` or `<!--more-->` for MkDocs)
 
-5. **Check the destination, then save with a filename matching layout conventions** — The path is derived from the slug, so a new draft can silently overwrite an existing post. Search the discovered posts directory *and* its sibling `_drafts` for the slug rather than testing only the computed path — a Jekyll post carries a date prefix, so `YYYY-MM-DD-<slug>.md` under another date, or a published post when the new destination is a draft, would otherwise go unnoticed (e.g. `ls <posts-directory> <posts-parent>/_drafts 2>/dev/null | grep -i <slug>`). If anything matches, ask whether to update that post or choose another slug, and never overwrite or duplicate without confirmation.
+6. **Check the destination, then save with a filename matching layout conventions** — The path is derived from the slug, so a new draft can silently overwrite an existing post. Search the discovered posts directory *and* its sibling `_drafts` for the slug rather than testing only the computed path — a Jekyll post carries a date prefix, so `YYYY-MM-DD-<slug>.md` under another date, or a published post when the new destination is a draft, would otherwise go unnoticed (e.g. `ls <posts-directory> <posts-parent>/_drafts 2>/dev/null | grep -i <slug>`). If anything matches, ask whether to update that post or choose another slug, and never overwrite or duplicate without confirmation.
     - MkDocs / Hugo: `<posts-directory>/<slug>.md` (e.g. `docs/posts/distributing-python-clis-via-homebrew-and-scoop.md`)
     - Jekyll: `<posts-directory>/YYYY-MM-DD-<slug>.md` (or `<posts-parent>/_drafts/<slug>.md` beside `<posts-directory>` if saving as a draft)
 
