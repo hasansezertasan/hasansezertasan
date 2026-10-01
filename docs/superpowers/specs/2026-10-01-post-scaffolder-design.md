@@ -58,7 +58,9 @@ extra for transliteration (both permissively licensed: MIT, ISC).
   `c-rust-2026-notlar`, `"!!!"` → `""`.
 
 An explicit `--slug` is used verbatim after validating it matches
-`^[a-z0-9]+(-[a-z0-9]+)*$`; otherwise exit 1.
+`^[a-z0-9]+(-[a-z0-9]+)*$` and is at most 80 characters; otherwise exit 1.
+The `slug:` value is quoted by the same rule as categories (below), so
+slugs like `2026` or `true` stay strings.
 
 **Output file** — `docs/posts/<slug>.md`, dates set to today (local time):
 
@@ -119,6 +121,9 @@ lets tests target a temporary directory.
   - Target file already exists → message includes the existing path. The file
     is created with exclusive-create mode (`"x"`) so there is no
     check-then-write race.
+  - Any other filesystem error opening the file → `could not create post: …`.
+  - A write failure after the file was created (e.g. disk full) →
+    `could not write post: …`, and the partial file is removed.
   - `docs/posts/` does not exist.
 
 ### `scripts/test_new_post.py`

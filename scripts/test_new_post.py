@@ -1,4 +1,5 @@
 import datetime as dt
+from pathlib import Path
 
 import pytest
 import yaml
@@ -86,6 +87,17 @@ def test_render_post_quotes_categories_yaml_would_retype(category):
     assert meta["categories"] == [category]
 
 
+@pytest.mark.parametrize("slug", ["2026", "true", "null", "2026-10-01"])
+def test_render_post_quotes_slugs_yaml_would_retype(slug):
+    # Material requires a string slug; an int/bool/date one aborts the build.
+    assert frontmatter(render_post("Hi", slug, [], True, TODAY))["slug"] == slug
+
+
+def test_create_post_derived_numeric_slug_stays_a_string(tmp_path):
+    path = create_post("2026", [], None, True, tmp_path, TODAY)
+    assert frontmatter(path.read_text(encoding="utf-8"))["slug"] == "2026"
+
+
 def test_create_post_writes_file(tmp_path):
     path = create_post("Şişli'de Ağır Çözüm", ["python"], None, True, tmp_path, TODAY)
     assert path == tmp_path / "sisli-de-agir-cozum.md"
@@ -141,6 +153,43 @@ def test_create_post_refuses_to_overwrite(tmp_path):
 def test_create_post_missing_posts_dir(tmp_path):
     with pytest.raises(PostError, match="posts directory not found"):
         create_post("Hi", [], None, True, tmp_path / "nope", TODAY)
+
+
+def test_create_post_rejects_overlong_slug(tmp_path):
+    with pytest.raises(PostError, match="invalid --slug"):
+        create_post("Title", [], "a" * 81, True, tmp_path, TODAY)
+    assert list(tmp_path.iterdir()) == []
+
+
+def test_create_post_reports_unwritable_posts_dir(tmp_path):
+    tmp_path.chmod(0o500)
+    try:
+        with pytest.raises(PostError, match="could not create post"):
+            create_post("Hi", [], None, True, tmp_path, TODAY)
+    finally:
+        tmp_path.chmod(0o700)
+
+
+def test_create_post_removes_partial_file_when_write_fails(tmp_path, monkeypatch):
+    real_open = Path.open
+
+    class FailingWrite:
+        def __init__(self, file):
+            self.file = file
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *exc):
+            self.file.close()
+
+        def write(self, _text):
+            raise OSError(28, "No space left on device")
+
+    monkeypatch.setattr(Path, "open", lambda self, *a, **k: FailingWrite(real_open(self, *a, **k)))
+    with pytest.raises(PostError, match="could not write post"):
+        create_post("Hi", [], None, True, tmp_path, TODAY)
+    assert list(tmp_path.iterdir()) == []
 
 
 @pytest.fixture

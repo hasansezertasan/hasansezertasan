@@ -19,10 +19,10 @@ POSTS_DIR = REPO_ROOT / "docs" / "posts"
 AUTHOR = "hasansezertasan"
 SLUG_MAX_LENGTH = 80
 SLUG_PATTERN = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
-# Categories matching this are emitted as plain YAML scalars (e.g. `astral.sh`);
+# Slugs and categories matching this are emitted as plain YAML scalars (e.g. `astral.sh`);
 # anything else is double-quoted so it cannot change the frontmatter's structure.
 # A leading letter rules out numbers and dates (`2026`, `0x1f`, `2026-10-01`).
-PLAIN_CATEGORY = re.compile(r"^[a-z][a-z0-9._-]*$")
+PLAIN_SCALAR = re.compile(r"^[a-z][a-z0-9._-]*$")
 # Plain scalars YAML 1.1 (PyYAML, which MkDocs uses) loads as bool or None.
 YAML_RESERVED = frozenset({"null", "true", "false", "yes", "no", "on", "off", "y", "n"})
 
@@ -37,7 +37,7 @@ def make_slug(title: str) -> str:
 
 
 def yaml_scalar(value: str) -> str:
-    if PLAIN_CATEGORY.fullmatch(value) and value not in YAML_RESERVED:
+    if PLAIN_SCALAR.fullmatch(value) and value not in YAML_RESERVED:
         return value
     return json.dumps(value, ensure_ascii=False)
 
@@ -51,7 +51,7 @@ def render_post(title: str, slug: str, categories: list[str], draft: bool, today
         lines += ["categories:", *(f"  - {yaml_scalar(category)}" for category in categories)]
     else:
         lines.append("categories: []")
-    lines += ["authors:", f"  - {AUTHOR}", f"slug: {slug}", "---", ""]
+    lines += ["authors:", f"  - {AUTHOR}", f"slug: {yaml_scalar(slug)}", "---", ""]
     lines += [f"# {title}", "", "TODO: intro paragraph.", "", "<!-- more -->", ""]
     return "\n".join(lines)
 
@@ -72,16 +72,27 @@ def create_post(
         slug = make_slug(title)
         if not slug:
             raise PostError("can't derive a slug from title; pass --slug")
-    elif not SLUG_PATTERN.fullmatch(slug):
-        raise PostError(f"invalid --slug {slug!r}; use lowercase letters, digits, and single hyphens")
+    elif len(slug) > SLUG_MAX_LENGTH or not SLUG_PATTERN.fullmatch(slug):
+        raise PostError(
+            f"invalid --slug {slug!r}; use at most {SLUG_MAX_LENGTH} lowercase letters, digits, and single hyphens"
+        )
     if not posts_dir.is_dir():
         raise PostError(f"posts directory not found: {posts_dir}")
     path = posts_dir / f"{slug}.md"
+    text = render_post(title, slug, categories, draft, today)
     try:
-        with path.open("x", encoding="utf-8") as file:
-            file.write(render_post(title, slug, categories, draft, today))
+        file = path.open("x", encoding="utf-8")
     except FileExistsError:
         raise PostError(f"post already exists: {path}") from None
+    except OSError as error:
+        raise PostError(f"could not create post: {error}") from None
+    try:
+        with file:
+            file.write(text)
+    except OSError as error:
+        # Only this call created the file, so removing it cannot touch an existing post.
+        path.unlink(missing_ok=True)
+        raise PostError(f"could not write post: {error}") from None
     return path
 
 
