@@ -161,13 +161,14 @@ def test_create_post_rejects_overlong_slug(tmp_path):
     assert list(tmp_path.iterdir()) == []
 
 
-def test_create_post_reports_unwritable_posts_dir(tmp_path):
-    tmp_path.chmod(0o500)
-    try:
-        with pytest.raises(PostError, match="could not create post"):
-            create_post("Hi", [], None, True, tmp_path, TODAY)
-    finally:
-        tmp_path.chmod(0o700)
+def test_create_post_reports_unwritable_posts_dir(tmp_path, monkeypatch):
+    # Raise directly rather than chmod: root (common in CI containers) ignores permission bits.
+    def deny(self, *args, **kwargs):
+        raise PermissionError(13, "Permission denied", str(self))
+
+    monkeypatch.setattr(Path, "open", deny)
+    with pytest.raises(PostError, match="could not create post: .*Permission denied"):
+        create_post("Hi", [], None, True, tmp_path, TODAY)
 
 
 def test_create_post_removes_partial_file_when_write_fails(tmp_path, monkeypatch):
