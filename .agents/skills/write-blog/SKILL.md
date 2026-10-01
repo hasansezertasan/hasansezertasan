@@ -33,7 +33,13 @@ Write blog posts that match the existing format in the user's blog repository.
       - MkDocs / Hugo: `<slug>.md`
       - Jekyll: `<posts-directory>/YYYY-MM-DD-<slug>.md` in `<posts-directory>/` (or `<slug>.md` in `<posts-parent>/_drafts/`)
 
-4. **Scaffold with the repo's command, if it has one** — If `scripts/new_post.py` exists, create the file with it instead of writing frontmatter by hand:
+4. **Scaffold with the repo's command, if it has one** — Check for the task rather than a script file, since an unrelated `scripts/new_post.py` proves nothing:
+
+    ```bash
+    mise tasks info post:new >/dev/null 2>&1 && mise run post:new -- --help
+    ```
+
+    Use it only if the task exists and its help lists `--category`, `--slug`, and `--publish`; otherwise go to step 5. Then create the file with it instead of writing frontmatter by hand:
 
     ```bash
     mise run post:new -- "<Title>" -c <category> -c <category>
@@ -42,7 +48,8 @@ Write blog posts that match the existing format in the user's blog repository.
     - Use the categories chosen from existing posts; add `--slug <slug>` only when the user wants a specific one, and `--publish` only when they ask to publish immediately.
     - On success it prints the created path — open that file, replace the `TODO: intro paragraph.` line with the intro, and write the sections below `<!-- more -->`. Keep the frontmatter it generated. The pre-commit prose linter rejects a leftover `TODO`, so the intro must be written before committing.
     - If it exits 1 with `error: post already exists: <path>`, ask whether to update that post or choose another slug; never delete the existing file to make room.
-    - Then skip steps 5 and 6 below — they are the manual fallback for repositories without the command.
+    - If it exits 1 with any other `error: …` message, report it to the user rather than falling back silently.
+    - After a successful scaffold, skip steps 5 and 6 below — they are the manual fallback for repositories without a compatible command.
 
 5. **Generate the post** (manual fallback):
     - Slug from title (lowercase, hyphenated)
