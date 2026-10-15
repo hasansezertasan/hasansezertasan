@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Hasan Sezer Ta&#351;an&#39;s GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 200, Total Commits  (last year) : 3611, Total PRs: 1409, Total PRs Merged: 1241, Merged PRs Percentage: 88.08, Total PRs Reviewed: 2561, Total Issues: 576, Total Discussions Started: 41, Total Discussions Answered: 17, Contributed to (last year): 48</desc>
+        <desc id="descId">Total Stars Earned: 200, Total Commits  (last year) : 3634, Total PRs: 1440, Total PRs Merged: 1270, Merged PRs Percentage: 88.19, Total PRs Reviewed: 2533, Total Issues: 579, Total Discussions Started: 41, Total Discussions Answered: 17, Contributed to (last year): 50</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 17.793872078748898;
+        stroke-dashoffset: 17.793755707774686;
       }
     }
   
@@ -214,7 +214,7 @@
         x="224.01"
         y="12.5"
         data-testid="prs_merged"
-      >1.2k</text>
+      >1.3k</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
@@ -229,7 +229,7 @@
         x="224.01"
         y="12.5"
         data-testid="prs_merged_percentage"
-      >88.08 %</text>
+      >88.19 %</text>
     </g>
   </g><g transform="translate(0, 125)">
     <g class="stagger" style="animation-delay: 1200ms" transform="translate(25, 0)">
@@ -244,7 +244,7 @@
         x="224.01"
         y="12.5"
         data-testid="reviews"
-      >2.6k</text>
+      >2.5k</text>
     </g>
   </g><g transform="translate(0, 150)">
     <g class="stagger" style="animation-delay: 1350ms" transform="translate(25, 0)">
@@ -259,7 +259,7 @@
         x="224.01"
         y="12.5"
         data-testid="issues"
-      >576</text>
+      >579</text>
     </g>
   </g><g transform="translate(0, 175)">
     <g class="stagger" style="animation-delay: 1500ms" transform="translate(25, 0)">
@@ -304,7 +304,7 @@
         x="224.01"
         y="12.5"
         data-testid="contribs"
-      >48</text>
+      >50</text>
     </g>
   </g>
     </svg>
