@@ -28,6 +28,6 @@ I explored those questions with agentic workflows. I used Claude Code to researc
 Once the process was repeatable, I turned both repositories into templates:
 
 - **[tap-template](https://github.com/hasansezertasan/tap-template)** — Formula scaffolding from PyPI, bottle publishing, automated update workflows
-- **[bucket-template](https://github.com/hasansezertasan/bucket-template)** — Binary releases, pipx/uv shim support, Windows CI tests
+- **[copier-scoop-bucket](https://github.com/hasansezertasan/copier-scoop-bucket)** — Binary releases, pipx/uv shim support, Windows CI tests
 
 Start with the template, run `add_formula.py` or `add-manifest`, then push your changes. Your users can install the result with `brew install` or `scoop install`.

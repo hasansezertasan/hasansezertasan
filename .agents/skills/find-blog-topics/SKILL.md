@@ -150,7 +150,7 @@ Scan the user's GitHub activity and identify topics worth writing about.
 ## Tooling & Automation
 
 3. **"Reusable Homebrew/Scoop Bucket Templates"** — Manifest scaffolding,
-    update automation, cross-platform CI. Source: tap-template, bucket-template
+    update automation, cross-platform CI. Source: tap-template, copier-scoop-bucket
 ```
 
 ## Attribution caveats
