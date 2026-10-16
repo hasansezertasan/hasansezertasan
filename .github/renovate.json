@@ -1,7 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>hasansezertasan/renovate-config:python"],
-  "pep723": {
-    "managerFilePatterns": ["/^scripts/.+\\.py$/"]
-  }
+  "extends": ["github>hasansezertasan/renovate-config:python"]
 }
