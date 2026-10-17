@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Hasan Sezer Ta&#351;an&#39;s GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 212, Total Commits  (last year) : 3696, Total PRs: 1454, Total PRs Merged: 1287, Merged PRs Percentage: 88.51, Total PRs Reviewed: 2552, Total Issues: 595, Total Discussions Started: 41, Total Discussions Answered: 17, Contributed to (last year): 50</desc>
+        <desc id="descId">Total Stars Earned: 212, Total Commits  (last year) : 3764, Total PRs: 1501, Total PRs Merged: 1330, Merged PRs Percentage: 88.61, Total PRs Reviewed: 2566, Total Issues: 602, Total Discussions Started: 41, Total Discussions Answered: 17, Contributed to (last year): 51</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 17.02606445327982;
+        stroke-dashoffset: 17.020701485804874;
       }
     }
   
@@ -184,7 +184,7 @@
         x="224.01"
         y="12.5"
         data-testid="commits"
-      >3.7k</text>
+      >3.8k</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -229,7 +229,7 @@
         x="224.01"
         y="12.5"
         data-testid="prs_merged_percentage"
-      >88.51 %</text>
+      >88.61 %</text>
     </g>
   </g><g transform="translate(0, 125)">
     <g class="stagger" style="animation-delay: 1200ms" transform="translate(25, 0)">
@@ -259,7 +259,7 @@
         x="224.01"
         y="12.5"
         data-testid="issues"
-      >595</text>
+      >602</text>
     </g>
   </g><g transform="translate(0, 175)">
     <g class="stagger" style="animation-delay: 1500ms" transform="translate(25, 0)">
@@ -304,7 +304,7 @@
         x="224.01"
         y="12.5"
         data-testid="contribs"
-      >50</text>
+      >51</text>
     </g>
   </g>
     </svg>
