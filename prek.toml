@@ -87,7 +87,7 @@ hooks = [
 ]
 [[repos]]
 repo = "https://github.com/jackdewinter/pymarkdown"
-rev = "v0.9.40"
+rev = "v0.9.41"
 hooks = [
   { id = "pymarkdown", pass_filenames = false, args = [
     "--config=pyproject.toml",
@@ -98,5 +98,5 @@ hooks = [
 ]
 [[repos]]
 repo = "https://github.com/astral-sh/uv-pre-commit"
-rev = "0.13.0"
+rev = "0.13.1"
 hooks = [{ id = "uv-lock" }]
