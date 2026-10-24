@@ -19,7 +19,9 @@ hooks = [
   # `.github/workflows/readme-stats.yml` and committed without running prek.
   { id = "end-of-file-fixer", exclude = '^profile/.*\.svg$' },
   { id = "fix-byte-order-marker" },
-  { id = "mixed-line-ending" },
+  # .gitignore carries the cobo block, which keeps the lone CR bytes of the macOS
+  # `Icon\r` patterns; normalizing them would break the block checksum.
+  { id = "mixed-line-ending", exclude = "^\\.gitignore$" },
   { id = "no-commit-to-branch" },
   { id = "trailing-whitespace", exclude = '^profile/.*\.svg$' },
 ]

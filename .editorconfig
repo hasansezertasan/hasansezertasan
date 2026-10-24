@@ -16,3 +16,11 @@ trim_trailing_whitespace = true
 # yamlfmt, taplo-format and markdownlint-cli2 (MD007: indent 2) enforce.
 [*.{yml,yaml,toml,json,jsonc,md,markdown}]
 indent_size = 2
+
+# cobo-managed files: cobo.lock is rendered with 2-space TOML tables, and .gitignore keeps
+# the lone CR bytes of the macOS `Icon\r` patterns (cobo --eol lf).
+[cobo.lock]
+indent_size = 2
+
+[.gitignore]
+end_of_line = unset
