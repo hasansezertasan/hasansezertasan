@@ -27,7 +27,7 @@ hooks = [
 ]
 [[repos]]
 repo = "https://github.com/python-jsonschema/check-jsonschema"
-rev = "0.38.2"
+rev = "0.39.0"
 hooks = [
   { id = "check-github-actions" },
   { id = "check-github-issue-forms" },
@@ -36,7 +36,7 @@ hooks = [
 ]
 [[repos]]
 repo = "https://github.com/crate-ci/typos"
-rev = "v1.51.1"
+rev = "v1.52.2"
 hooks = [{ id = "typos" }]
 [[repos]]
 # Enforces `.editorconfig`; nothing else in this suite does.
@@ -70,7 +70,7 @@ hooks = [
 ]
 [[repos]]
 repo = "https://github.com/DavidAnson/markdownlint-cli2"
-rev = "v0.24.0"
+rev = "v0.24.1"
 hooks = [
   { id = "markdownlint-cli2", args = [
     "--config",
@@ -100,5 +100,5 @@ hooks = [
 ]
 [[repos]]
 repo = "https://github.com/astral-sh/uv-pre-commit"
-rev = "0.13.5"
+rev = "0.13.8"
 hooks = [{ id = "uv-lock" }]
